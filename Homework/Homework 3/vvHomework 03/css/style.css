@@ -1,0 +1,310 @@
+/* This applies to the full document */
+
+/* Note: colors given in the stylesheet (below) do not match the solution code doc, so I added some additional colors to match the solution code */
+:root {
+    --trulia-green: rgba(32,192,99,1);
+    --trulia-gray: rgba(232,233,234,1);
+    --dark-text: rgba(59,65,68,1);
+    --solution-dark-gray-text: #787d81;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Note: Starter code only asked for Lato 400 normal. I added in a few more weights than what was requested to match solution code more. */
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+/* This is the header */
+.trulia-header {
+    background-color: var(--trulia-green);
+    min-height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.trulia-nav-left {
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.trulia-logo {
+    width: 80px;
+}
+
+.trulia-nav-left .nav-list {
+    margin-left: 20px;
+}
+
+.nav-list-elements,
+.nav-list-links,
+.nav-list-links:visited {
+    padding: 0 5px;
+    display: inline;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.trulia-nav-right {
+    margin-right: 20px 10px 20px 20px;
+}
+
+.circle-J {
+    margin-right: 3px;
+    padding: 2px 8px;
+    border: 2px solid white;
+    border-radius: 100px;
+}
+
+/* This is for the main section header */
+hgroup {
+    padding: 40px 20px 20px 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+.trulia-main-container-title {
+    margin: 0;
+    font-size: 14px;
+}
+
+.trulia-main-container-subtitle {
+    margin: 0 0 0 20px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/* This is for the Trulia grid */
+.trulia-grid {
+    padding: 15px;
+    background-color: var(--trulia-gray);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+
+/* This is for the individual Trulia house cards */
+.trulia-house-cards {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.trulia-house-image-container {
+    min-height: 170px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* This is for all the text in the individual Trulia house cards */
+.trulia-house-details {
+    margin: 0px;
+    padding: 5px 10px 20px 10px;
+    background-color: white;
+}
+
+.trulia-house-details,
+.trulia-interior-details {
+    list-style: none;
+}
+
+.trulia-price {
+    padding-bottom: 2px;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.up-arrow {
+    width: 15px;
+    vertical-align: bottom;
+}
+
+.trulia-interior-details {
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    font-size: 14px;
+}
+
+.bed-icon,
+.bath-icon {
+    margin-right: 3px;
+    width: 15px;
+    vertical-align: middle;
+
+}
+
+.trulia-address {
+    color: var(--solution-dark-gray-text)
+}
+
+/* This is for the image container text overlay */
+.trulia-house-image-container-text-overlay {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.new-property {
+    padding: 0 5px;
+    background-color: rgba(32,192,99,0.6);
+    display: inline-block;
+    border-radius: 5px 0 5px 0;
+}
+
+.sale-owner-property {
+    padding: 0 30px 0 5px;
+    background-color: rgba(59,65,68,0.2);
+    display: inline-block;
+    border-radius: 5px 0 5px 0;
+}
+
+/* This is for the individual Trulia house image containers */
+.one-3205-georgia-403 {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/house-1.jpg");
+}
+
+.two-3615-10th {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/house-2.jpg");
+}
+
+.three-3120-park {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/house-3.jpg");
+}
+
+.four-3221-warder {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/house-4.jpg");
+}
+
+.five-705-kenyon {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/house-5.jpg");
+}
+
+.six-1363-oak {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/house-6.jpg");
+}
+
+.seven-1307-irving {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/house-7.jpg");
+}
+
+.eight-752-park {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/house-8.jpg");
+}
+
+.nine-2932-vernon {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/house-09.jpg");
+}
+
+.ten-3511-17th {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/house-10.jpg");
+}
+
+.eleven-1356-kenyon {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/house-11.jpg");
+}
+
+.twelve-3205-georgia-505 {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/house-12.jpg");
+}
+
+/* This is for the page results section */
+.page-results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-results-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.page-results-nav-main-list,
+.cookie-crumbs-list {
+    padding: 0;
+    text-align: center;
+}
+
+.page-results-nav-elements {
+    margin: 0;
+    padding: 0 5px;
+    display: inline-block;
+    font-size: 14px;
+    text-align: center;
+}
+
+.page-results-nav-links,
+.page-results-nav-links:visited,
+.re-insights-link,
+.re-insights-link:visited {
+    color: var(--trulia-green);
+    text-decoration: none;
+}
+
+.page-results-nav-subtitle {
+    margin: 0;
+    padding: 0;
+    color: var(--solution-dark-gray-text);
+    font-size: 14px;
+    text-align: center;
+}
+
+/* This is for the insights section */
+.re-insights-container {
+    padding: 10px 150px 25px 30px;
+}
+
+.re-insights-heading {
+    font-size: 21px;
+}
+
+.re-insights-body-text {
+    font-size: 15px;
+}
+
+/* This is the footer section */
+.trulia-footer {
+    padding: 10px 0 20px 25px;
+    background-color: var(--dark-text);
+}
+
+.trulia-footer-nav-list {
+    padding: 0;
+    list-style: none;
+}
+
+.trulia-footer-nav-elements {
+    padding-right: 5px;
+    display: inline;
+}
+
+.trulia-footer-nav-links,
+.trulia-footer-nav-links:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.trulia-footer-copyright {
+    padding: 0 auto;
+    display: block;
+    justify-content: center;
+    color: var(--solution-dark-gray-text);
+    font-size: 10px;
+    text-align: center;
+}

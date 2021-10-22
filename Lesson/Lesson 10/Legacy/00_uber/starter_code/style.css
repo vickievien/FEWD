@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Note to self for sizing:
+mobile max-width: 545px
+tablet min-width: 546 and max-width: 768px
+desktop: min-width: 769px */
+
+
+/* Style for mobile phone first */
+.uber-section-container {
+    padding: 10px;
+}
+
+.uber-icon-container {
+    width: 30%;
+}
+
+.uber-subtitle {
+    margin: 10px auto;
+}
+
+.uber-card-container {
+    padding-bottom: 20px;
+}
+
+/* Style for tablet -  */
+@media (min-width: 546px) and (max-width: 768px) {
+    .uber-card-container {
+        display: flex;    
+    }
+    .uber-icon-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        width: 30vw;
+    }
+    .uber-text-container {
+        margin: 10px;
+        width: 70vw;
+    }
+}
+
+@media (min-width: 769px) {
+    .uber-section-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    .uber-card-container {
+        margin: 10px;
+    }
+    .uber-icon-container {
+        width: 50%;
+    }
+}

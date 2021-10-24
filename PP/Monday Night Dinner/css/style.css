@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 100vh;
+}
+
+.body-container {
+    padding: 25px 50px;
+    background-color: white;
+}
+
+
+.heading-font {
+    font-family: 'Rampart One', cursive;
+    font-size: 68px;
+    margin: 40px 0 40px 0;
+}
+
+.header-subtext {
+    margin: 0 auto;
+    display: block;
+    padding: 16px auto;
+    font-size: 20px;
+
+}
+
+span {
+    font-family: 'Rampart One', cursive;
+    font-style: italic;
+    font-size: 22px;
+}
+
+header {
+    margin: 0 auto;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+    gap: 50px;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+
+.food-pin-logo {
+    width: 100%;
+}
+
+.output-container {
+    /* width: 300px; */
+}
+
+.result-tonight-text {
+    margin: 10px 0 15px 0;
+    font-size: 24px;
+}
+
+.result-output {
+    background-color: #E9E7E9;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 10px;
+    margin: 0;
+    width: 300px;
+    height: 50px;
+}

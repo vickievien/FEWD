@@ -1,17 +1,15 @@
 
 function randoRestaurant() {
-    let random = Math.ceil(Math.random() *5);
+    let random = Math.ceil(Math.random() *4);
     console.log(random);
     if (random === 1) {
-        document.querySelector('.result-output').innerText = '1st restaurant';
+        document.querySelector('.result-output').innerText = 'SUGARFISH';
     } else if (random === 2) {
-        document.querySelector('.result-output').innerText = '2nd restaurant';
+        document.querySelector('.result-output').innerText = 'Joey DTLA';
     } else if (random === 3) {
-        document.querySelector('.result-output').innerText = '3rd restaurant';
-    } else if (random === 4) {
-        document.querySelector('.result-output').innerText = '4th restaurant';
+        document.querySelector('.result-output').innerText = 'Daikokuya Little Tokyo';
     } else {
-        document.querySelector('.result-output').innerText = '5th restaurant';
+        document.querySelector('.result-output').innerText = 'HAMA SUSHI';
     }
 };
 

@@ -32,14 +32,47 @@ img {
 
 .subtle-button {
   background-color: goldenrod;
+  transition: 1s ease-in-out;
+}
+
+.subtle-button:hover {
+  background-color: gold;
 }
 
 .sideways-gradient {
+  background-image: linear-gradient(to left, fuchsia, purple);
   height: 200px;
   margin: 10px;
 }
 
+@keyframes rotateHead {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.mcconaughey {
+  animation: rotateHead 3s infinite;
+}
+
+@keyframes fadey {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+} 
 
 .mcconaughey-caption {
   text-align: center;
+  animation: fadey 6s infinite;
 }
+
+

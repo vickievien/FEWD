@@ -187,20 +187,35 @@ body {
 
 
 /* Create a media query to target print only */
-
+@media print {
     /* Hide Navigation */
-
+    footer.pcl_footer nav,
+    .pcl_siteHeader nav {
+        display: none;
+    }
 
 
 
     /* Hide Upsells */
-
+    .pcl_productbar {
+        display: none;
+    }
 
     /* Set widths */
-
+    .pcl_contentOuter, body {
+        width: 100%;
+    }
 
     /* Add borders to the table */
+    .pcl_invoice_items td,
+    .pcl_invoice_items th {
+        border-bottom: 1px solid gray;
+    }
 
+    .pcl_invoice_total {
+        border-top: 1px solid black;
+    }
+}
 
 
 

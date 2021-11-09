@@ -11,11 +11,11 @@ The Featured Item
 * Add the code to the interactive-style.
 * The user should have a visual queue that they can click on an trulia-grid-item. What is the usual behavior when the cursor hovers over links?
 
-The Grid: Responsive Issues
+<!-- The Grid: Responsive Issues
 * The grid of properties looks odd at both very large and small sizes.
 * At sizes above 1600px, make it 6 across
 * At sizes above 1200px, make it 4 across
-* At less than 768px, make it 2 across
+* At less than 768px, make it 2 across -->
 
 The Header
 * The header should show a hamburger at 1024px and below

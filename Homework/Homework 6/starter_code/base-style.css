@@ -160,7 +160,55 @@ a {
   display:none;
 }
 
+@media screen and (max-width: 1024px) {
+  .trulia-nav {
+    display: block;
+    /* justify-content: flex-start; */
+    flex-direction: column;
+    height: auto;
+    padding-top: 15px;
+  }
+  
+  .trulia-nav-left,
+  .trulia-nav-right {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 
+  .trulia-nav-toggle {
+    display: block;
+    margin-right: 2rem;
+    font-size: 2rem;
+    color: white;
+  }
+  .trulia-nav-mobilehide {
+    display: none;
+    width: 100%;
+  }
+  .trulia-nav ul li {
+    display: block;
+  }
+  .trulia-nav-left .trulia-nav-mobilehide {
+    margin-bottom: 0;
+  }
+  .trulia-nav-right .trulia-nav-mobilehide {
+    margin-top: 0;
+  }
+  .trulia-nav-item {
+    padding: 0 0 25px 25px;
+    font-size: 2rem;
+  }
+  .trulia-nav-logo {
+    position: left;
+    padding-left: 0;
+  }
+  .trulia-nav-left a .trulia-nav-item {
+    padding-bottom: 0;
+  }
+  .trulia-nav-mobilehide-show {
+    display: block;
+  }
+}
 
 /**
  * CSS CIRCLE - rough how to
@@ -217,6 +265,25 @@ a {
 
 }
 
+/* Responsive grids based on screen widths */
+
+@media only screen and (min-width: 1600px) {
+  .trulia-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 1200px ) and (max-width: 1599px) {
+  .trulia-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .trulia-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 .trulia-grid-item {
   background-color: white;

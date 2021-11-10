@@ -1,0 +1,269 @@
+/* Universal application to the doc */
+:root {
+    --poppy: rgba(235,69,40,1);
+    --golden-brown: rgba(157,108,4,1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Serif', serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Phone-like size <768
+Tablet-like size >=768 to <992
+Small laptop-like size >=992 <1200
+Desktop-like size >=1200 */
+/* 
+@media only screen and (min-width: 768px) and (max-width: 991) {
+
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199) {
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+}
+ */
+
+ 
+
+
+/* This is the header */
+.ww-announce-bar {
+    display: none;
+    padding: 8px;
+    background-color: var(--golden-brown);
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
+
+.ww-nav-container {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: black;
+}
+.ww-logo-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.ww-logo {
+    margin: 0;
+    padding-top: 10px;
+    width: 10vw;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.ww-burger-list-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.ww-nav-burger {
+    width: 100%;
+    display: block;
+    text-align: right;
+}
+.ww-nav-list {
+    margin: 0;
+    display: none;
+    list-style: none;
+    text-align: end;
+}
+
+.ww-nav-list-toggle {
+    display: block;
+}
+
+.ww-nav-list-items {
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    line-height: 1.5rem;
+}
+
+.ww-nav-list-items,
+.ww-nav-burger {
+    color: white;
+    font-size: 2.0rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.ww-nav-list-items a,
+.ww-nav-list-items a:visited,
+.ww-logo,
+.ww-logo:visited,
+.ww-nav-burger,
+.ww-nav-burger:visited {
+    color: white;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+
+.ww-nav-list-items a:hover,
+.ww-logo:hover,
+.ww-nav-burger:hover {
+    color: var(--golden-brown);
+}
+
+
+@media only screen and (min-width: 768px) {
+    .ww-announce-bar {
+        display: block;
+    }
+    .ww-nav-container {
+        align-items: center;
+    }
+    .ww-nav-list {
+        padding: 0;
+        width: 60vw;
+        display: flex;
+        justify-content: space-between;
+    }
+    .ww-nav-list-items {
+        font-size: 0.8rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+    }
+    .ww-nav-burger,
+    .nav-remove {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .nav-remove {
+        display: block;
+    }
+    .ww-nav-list {
+        font-size: 0.5rem;
+        gap: 10px;
+    }
+}
+
+/* This is the hero section */
+.ww-hero-section {
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../photos/nature/mt-fuji-1200.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.ww-hero-content-container {
+    padding: 20px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    background-color: rgba(255,255,255, 0.6);
+}
+
+.ww-hero-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.ww-hero-head {
+    margin: 0;
+    font-family: 'Noto Serif', serif;
+    font-weight: 700;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
+.ww-hero-text {
+    margin: 10px 0 20px 0;
+    width: 65%;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.ww-btn,
+.ww-btn:visited {
+    padding: 20px 40px;
+    width: 60%;
+    background-color: var(--golden-brown);
+    transition: 1s ease-in-out;
+    border-style: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+.ww-btn:hover {
+    background-color: var(--poppy);   
+}
+
+@media only screen and (min-width: 768px) {
+    .ww-hero-section {
+        padding-left: 1rem;
+        min-height: 450px
+        justify-content: flex-start;
+        
+    }
+    .ww-hero-content-container {
+        width: 45vw;
+    }
+    .ww-hero-text {
+        width: 95%
+    }
+    .ww-btn {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .ww-hero-section {
+        padding-left: 5rem;
+        min-height: 550px;
+        justify-content: flex-start;
+    }
+    .ww-hero-content-container {
+        padding: 60px;
+    }
+    .ww-hero-head {
+        font-size: 2.5rem;
+        font-weight: 900;
+    }
+    .ww-hero-text {
+        padding-bottom: 20px;
+        width: 90%
+        font-size: 1.2rem;
+    }
+    .ww-btn {
+        width: 60%;
+    }
+}

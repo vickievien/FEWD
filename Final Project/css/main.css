@@ -2,6 +2,7 @@
 :root {
     --poppy: rgba(235,69,40,1);
     --golden-brown: rgba(157,108,4,1);
+    --golden-yellow: rgba(206,148,23,1);
 }
 
 * {
@@ -13,6 +14,7 @@
 body {
     font-family: 'Noto Serif', serif;
     font-family: 'Roboto', sans-serif;
+    /* background-color: black; */
 }
 
 /* Phone-like size <768
@@ -128,6 +130,7 @@ Desktop-like size >=1200 */
 .ww-logo:hover,
 .ww-nav-burger:hover {
     color: var(--golden-brown);
+    font-weight: 700;
 }
 
 
@@ -169,11 +172,11 @@ Desktop-like size >=1200 */
 
 /* This is the hero section */
 .ww-hero-section {
-    min-height: 300px;
+    min-height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("../photos/nature/mt-fuji-1200.jpg");
+    background-image: url("../photos/mt-fuji-1200.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -206,31 +209,35 @@ Desktop-like size >=1200 */
 }
 
 .ww-hero-text {
-    margin: 10px 0 20px 0;
-    width: 65%;
-    font-size: 1rem;
+    margin: 20px 30px 35px 30px;
+    font-size: 16px;
     font-weight: 500;
+    line-height: 1.5rem;
 }
 
 .ww-btn,
 .ww-btn:visited {
+    margin: auto;
     padding: 20px 40px;
-    width: 60%;
+    display: block;
     background-color: var(--golden-brown);
     transition: 1s ease-in-out;
-    border-style: none;
+    color: white;
     text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
     letter-spacing: 0.05rem;
+    border-radius: .3rem;
 }
 
 .ww-btn:hover {
-    background-color: var(--poppy);   
+    background-color: black;   
 }
 
 @media only screen and (min-width: 768px) {
     .ww-hero-section {
         padding-left: 1rem;
-        min-height: 450px
+        min-height: 600px
         justify-content: flex-start;
         
     }
@@ -248,7 +255,7 @@ Desktop-like size >=1200 */
 @media only screen and (min-width: 1200px) {
     .ww-hero-section {
         padding-left: 5rem;
-        min-height: 550px;
+        min-height: 600px;
         justify-content: flex-start;
     }
     .ww-hero-content-container {
@@ -259,11 +266,201 @@ Desktop-like size >=1200 */
         font-weight: 900;
     }
     .ww-hero-text {
-        padding-bottom: 20px;
-        width: 90%
-        font-size: 1.2rem;
+        width: 85%;
+        font-size: 18px;
+        line-height: 2rem;
     }
     .ww-btn {
         width: 60%;
     }
 }
+
+/* Cards Section */
+.ww-main-attract-section {
+    padding: 60px 10px;
+}
+.ww-main-attract-head {
+    margin-bottom: 40px;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.ww-main-attract-title {
+    padding-bottom: 10px;
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+}
+
+.ww-main-attract-subtitle {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.ww-main-attract-card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.ww-main-attract-card {
+    margin-bottom: 40px;
+    width: 85vw;
+    justify-self: center;
+    background-color: #ebebeb;
+    border: 0.01rem solid #d8d8d8;
+}
+
+.ww-main-attract-card-image {
+    width: 100%;
+    object-fit: cover;
+}
+
+.ww-main-attract-card-text-container {
+    padding: 20px 40px;
+    text-align: center;
+}
+
+.ww-main-attract-card-title {
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.ww-main-attract-card-caption {
+    font-weight: 300;
+    line-height: 1.5rem;
+}
+
+.ww-btn-card,
+.ww-btn-card:visited {
+    margin: 0 auto 40px auto;
+    padding: 10px 15px;
+    width: 60%;
+    display: block;
+    background-color: black;
+}
+
+.ww-btn-card:hover {
+    background-color: var(--golden-brown);
+}
+
+@media only screen and (min-width: 768px) {
+    .ww-main-attract-card {
+        width: 55vw;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .ww-main-attract-card-container {
+        padding: 0 40px;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+    .ww-main-attract-card {
+        margin-bottom: 0;
+        width: 100%;
+    }
+    .ww-main-attract-card-image {
+        height: 60%;
+    }
+    .ww-main-attract-card-text-container {
+        height: 25%;
+    }
+    .card-btn-container {
+        /* min-height: 10%; */
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+    }
+    .ww-btn-card,
+    .ww-btn-card:visited {
+        margin-top: 10px;
+        padding: 10px 30px;
+        width: auto;
+        font-size: 14px;
+    }  
+} 
+
+/* Food section */
+.ww-food-section {
+    margin-bottom: 50px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: black;
+}
+
+.ww-food-content-container {
+    padding: 10px 20px 10px 10px;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-align: right;
+}
+
+.ww-food-text-container {
+    padding-left: 10px;
+}
+
+.ww-food-title {
+    margin: 10px auto 10px auto;
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.hr {
+    margin: 5px;
+    color: white;
+}
+
+.ww-food-text {
+    margin: 10px auto 0 20px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 2rem;
+}
+
+.ww-food-image {
+    width: 100%;
+    object-fit: cover;
+}
+
+.ww-food-section a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .ww-food-section {
+        grid-template-columns: 2fr 3fr;
+    }
+    .ww-food-content-container {
+        position: relative;
+        left: 100px;
+    }
+    .ww-food-text-container {
+        padding: 20px 30px;
+        background-color: var(--golden-brown);
+        transition: ease-in-out 1s;
+        color: black;
+    }
+    .ww-food-text-container:hover {
+        background-color: var(--golden-yellow);
+    }
+    .ww-food-title {
+        font-size: 48px;
+    }
+    .ww-food-text {
+        font-size: 24px;
+        color: black;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+
+}
+
+/* Culture Section */

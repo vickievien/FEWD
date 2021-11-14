@@ -1,8 +1,8 @@
 function selectPet(petType){
 
     // Get the specific pet data set
-    let thePet = petData[petType]
-    console.log(petData);
+    let thePet = petData[petType];
+    console.log(thePet);
 
     // Set the title
     document.querySelector(".petDisplayName").innerHTML = thePet.displayName;
@@ -44,32 +44,41 @@ function selectPet(petType){
     // Update the images
     
         
-        document.querySelector(".photoLarge").setAttribute("src", thePet.images[0]);
+        document.querySelector(".photoLarge").setAttribute("src", thePet.images[0].img);
 
-        document.querySelector(".photoLarge").setAttribute("alt", thePet.images[0]);
+        document.querySelector(".photoLarge").setAttribute("alt", thePet.images[0].alt);
+
 
         let babyThumb = "";
 
-        document.querySelector(".thumbHaus").innerHTML = babyThumb;
 
-        let i=0;
-        babyThumb +=
-        `<a href="${thePet.images.img[i]}">
-            <img class="photoThumb" alt="${thePet.images.alt[i]}" src="${thePet.images.thumb[i]}"</a>`
-        console.log(babyThumb);
+        for(let i=0;i<thePet.images.length;i++){
+
+            babyThumb +=
+                "<a href=\""+thePet.images[i].img+"\"><img class=\"photoThumb\" src=\""+thePet.images[i].thumb+"\" alt=\""+thePet.images[i].alt+"\"/></a>";
+        }
+        document.querySelector(".thumbHaus").innerHTML = babyThumb;
+        
         // Apply the click event to thumbnails (note - this will likely need to be applied to the a and not the img direclty)
 
-        let petPicLarge = document.querySelector('.photoLarge');
+        let thumbHausChildren = document.querySelectorAll(".thumbHaus > a");
 
-        let petPicThumb = document.querySelectorAll('.thumbHaus a');  
-    
-        function changeToBig () {
+        for(let i=0;i<thumbHausChildren.length;i++){
 
-
+            thumbHausChildren[i].addEventListener("click",function(e){
+                e.preventDefault();
+                document.querySelector(".photoHaus .photoLarge").setAttribute("src",this.getAttribute("href")); 
+                document.querySelector(".photoHaus .photoLarge").setAttribute("alt",this.querySelector("img").getAttribute("alt"));
+            });
         }
 
+        // function changeToBig () {
 
-        petPicThumb[i].addEventListener('click', changeToBig)
+
+        // }
+
+
+        // petPicThumb[i].addEventListener('click', changeToBig)
 
     // Empty the ideal for
 

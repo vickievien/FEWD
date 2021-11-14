@@ -104,7 +104,7 @@ Desktop-like size >=1200 */
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    line-height: 1.5rem;
+    line-height: 2rem;
 }
 
 .ww-nav-list-items,
@@ -162,7 +162,7 @@ Desktop-like size >=1200 */
 
 @media only screen and (min-width: 1200px) {
     .nav-remove {
-        display: block;
+        display: flex;
     }
     .ww-nav-list {
         font-size: 0.5rem;
@@ -275,9 +275,9 @@ Desktop-like size >=1200 */
     }
 }
 
-/* Cards Section */
+/* THis is the Attraction Cards Section */
 .ww-main-attract-section {
-    padding: 60px 10px;
+    padding: 60px 10px 20px 10px;
 }
 .ww-main-attract-head {
     margin-bottom: 40px;
@@ -345,6 +345,10 @@ Desktop-like size >=1200 */
 }
 
 @media only screen and (min-width: 768px) {
+    .ww-main-attract-section {
+        padding-bottom: 60px;
+    }
+
     .ww-main-attract-card {
         width: 55vw;
     }
@@ -359,7 +363,15 @@ Desktop-like size >=1200 */
     .ww-main-attract-card {
         margin-bottom: 0;
         width: 100%;
+        will-change: transform;
+        transition: transform 450ms;
     }
+
+    .ww-main-attract-card:hover {
+        transform: translateY(-10px);
+        transition: transform 450ms;
+    }
+
     .ww-main-attract-card-image {
         height: 60%;
     }
@@ -387,23 +399,22 @@ Desktop-like size >=1200 */
     padding: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: black;
+    background-color: var(--golden-brown);
 }
 
 .ww-food-content-container {
     padding: 10px 20px 10px 10px;
     display: flex;
     align-items: center;
-    color: white;
     text-align: right;
 }
 
 .ww-food-text-container {
-    padding-left: 10px;
+    padding: 10px 0 10px 10px;
+    color: black;
 }
 
 .ww-food-title {
-    margin: 10px auto 10px auto;
     font-size: 36px;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
@@ -415,15 +426,16 @@ Desktop-like size >=1200 */
 }
 
 .ww-food-text {
-    margin: 10px auto 0 20px;
-    font-size: 18px;
+    margin: 10px auto 0 auto;
+    font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
-    line-height: 2rem;
+    line-height: 1.5rem;
 }
 
 .ww-food-image {
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -436,6 +448,7 @@ Desktop-like size >=1200 */
 @media only screen and (min-width: 768px) {
     .ww-food-section {
         grid-template-columns: 2fr 3fr;
+        background-color: black;
     }
     .ww-food-content-container {
         position: relative;
@@ -454,13 +467,160 @@ Desktop-like size >=1200 */
         font-size: 48px;
     }
     .ww-food-text {
+        margin-left: 20px;
         font-size: 24px;
-        color: black;
+        line-height: 2rem;
     }
 }
 
 @media only screen and (min-width: 1200px) {
-
+    .ww-food-image {
+        height: 80vh;
+    }
 }
 
 /* Culture Section */
+.ww-culture-section {
+    padding: 15px;
+}
+
+.ww-culture-text-container {
+    padding: 10px 10px 40px 10px;
+    text-align: center;
+}
+
+.ww-culture-title {
+    margin-bottom: 15px;
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+}
+
+.ww-culture-caption {
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.5rem;
+}
+
+.ww-culture-article {
+    padding: 10px;
+}
+
+.ww-culture-article:first-child {
+    margin-bottom: 20px;
+}
+.ww-culture-article-title-container {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.ww-culture-article-subtitle {
+    font-size: 16px;
+}
+
+.ww-culture-article-title {
+    font-family: 'Noto Serif', serif;
+    font-size: 26px;
+    letter-spacing: 0.1rem;   
+}
+
+.ww-culture-article-img-btn-container {
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.ww-culture-article-img-btn-container .ww-btn {
+    width: 100%;
+    color: black;
+    font-weight: 700;
+    border-radius: 0;
+}
+
+.ww-culture-article-img-btn-container .ww-btn:hover {
+    color: white;
+}
+
+.ww-culture-article-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media only screen and (min-width: 500px) and (max-width: 767px) {
+    .ww-culture-section {
+        padding: 0 50px;
+    }
+    .ww-culture-caption {
+        padding: 0;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .ww-culture-caption {
+        margin: auto;
+        width: 80%;
+        display: block;
+        text-align: center;
+    }
+    .ww-culture-article-container {
+        padding: 0 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    .ww-culture-article-img-btn-container {
+    }
+    .ww-culture-article-image {
+        height: 300px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .ww-culture-section {
+        padding: 15px 25px;
+        display: grid;
+        grid-template-columns: 1fr 2.5fr;
+    }
+    .ww-culture-text-container {
+        padding-left: 40px;
+    }
+    .ww-culture-title {
+        font-size: 36px;
+        text-align: right;
+    }
+    .ww-culture-caption {
+        margin: 0;
+        padding: 0;
+        width: auto;
+        font-size: 20px;
+        text-align: right;
+        line-height: 2rem;
+    }
+    .ww-culture-article-container {
+        padding-left: 55px;
+    }
+    .ww-culture-article {
+        will-change: transform;
+        transition: transform 450ms;
+    }
+    .ww-culture-article:hover {
+        transform: translateY(-10px);
+        transition: transform 450ms;
+    }
+}
+
+/* This is the nightlife section */
+.ww-nightlife-section {
+    display: flex;
+}
+
+.ww-nightlife-image {
+    order: 2;
+}
+
+.ww-nightlife-text-container {
+    order: 1;
+}

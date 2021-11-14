@@ -56,7 +56,7 @@ function selectPet(petType){
         babyThumb +=
         `<a href="${thePet.images.img[i]}">
             <img class="photoThumb" alt="${thePet.images.alt[i]}" src="${thePet.images.thumb[i]}"</a>`
-
+        console.log(babyThumb);
         // Apply the click event to thumbnails (note - this will likely need to be applied to the a and not the img direclty)
 
         let petPicLarge = document.querySelector('.photoLarge');

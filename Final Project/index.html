@@ -9,7 +9,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+  
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -125,14 +127,41 @@
     </section>
 
     <section class="ww-nightlife-section">
-        <a href="#"><img class="ww-nightlife-image" src="./photos/nightlife-600.jpg" alt="tokyo-nightlife"></a>
-        <div class="ww-nightlife-text-container">
-            <h2>Tokyo's Legendary Nightlife</h2>
-            <p>From hole-in-the-wall bars to extravagant nightclubs and everything in-between, there is no shortage of watering holes to be found in Tokyo.</p>
-        </div>
+            <a href="#"><img class="ww-nightlife-image" src="./photos/nightlife-600.jpg" alt="tokyo-nightlife"></a>
+            <div class="ww-nightlife-text-container">
+                <h2 class="ww-nightlife-title">Tokyo's Legendary Nightlife</h2>
+                <p class="ww-nightlife-caption">From hole-in-the-wall bars to extravagant nightclubs and everything in-between, there is no shortage of watering holes to be found in Tokyo.</p>
+                <a href="#" class="ww-btn ww-btn-card">Explore</a>
+            </div>
     </section>
     <section></section>
-    <footer></footer>
+    <footer class="ww-footer-section">
+        <div class="ww-footer-left">
+            <nav class="ww-footer-social-nav">
+                <ul class="ww-footer-social-list">
+                    <li class="ww-social-list-item">IG<i class="fab fa-instagram"></i></li>
+                    <li class="ww-social-list-item">FB<i class="fab fa-facebook"></i></li>
+                    <li class="ww-social-list-item">Twit<i class="fab fa-twitter"></i></li>
+                </ul>
+            </nav>
+            <nav class="ww-footer-link-nav">
+                <ul class="ww-footer-link-list">
+                    <li class="ww-link-list-item"><a href="#">Info</a></li>
+                    <li class="ww-link-list-item"><a href="#">Support</a></li>
+                    <li class="ww-link-list-item"><a href="#">Term of Use</a></li>
+                    <li class="ww-link-list-item"><a href="#">Privacy Policy</a></li>
+                </ul>
+            </nav>
+            <small>&copy; 2021 The Wandering Wanderlust</small>
+        </div>
+        <div class="ww-footer-right">
+            <h1 class="ww-form-title">Subscribe Now</h1>
+            <form action="#" method="post" class="ww-subscribe-form"></form>
+                <label for="email"></label>
+                <input type="email" name="email" id="email" placeholder="Your e-mail here">
+                <input type="submit">
+        </div>
+    </footer>
 
 
 

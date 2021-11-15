@@ -481,7 +481,7 @@ Desktop-like size >=1200 */
 
 /* Culture Section */
 .ww-culture-section {
-    padding: 15px;
+    padding: 15px 15px 40px 15px;
 }
 
 .ww-culture-text-container {
@@ -551,7 +551,7 @@ Desktop-like size >=1200 */
 
 @media only screen and (min-width: 500px) and (max-width: 767px) {
     .ww-culture-section {
-        padding: 0 50px;
+        padding: 0px 50px 40px 50px;
     }
     .ww-culture-caption {
         padding: 0;
@@ -614,13 +614,124 @@ Desktop-like size >=1200 */
 
 /* This is the nightlife section */
 .ww-nightlife-section {
+    margin-bottom: 50px; /*edit later*/
     display: flex;
+    flex-direction: column;
 }
 
 .ww-nightlife-image {
-    order: 2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.ww-nightlife-text-container {
+    padding: 20px;
+    background-color: #ebebeb;
+    text-align: center;
 }
 
-.ww-nightlife-text-container {
-    order: 1;
+.ww-nightlife-title {
+    margin-bottom: 15px;
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+}
+
+.ww-nightlife-caption {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.5rem;
+}
+
+.ww-nightlife-text-container .ww-btn-card {
+    margin: 10px auto;
+    display: inline-block;
+}
+
+@media only screen and (min-width: 768px) {
+    .ww-nightlife-text-container {
+        padding: 40px;
+    }
+    .ww-nightlife-caption {
+        width: 600px;
+        margin: auto;
+        padding-bottom: 15px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .ww-nightlife-section {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+    
+    }
+    .ww-nightlife-image {
+        width: 55vw;
+    }
+    .ww-nightlife-text-container {
+        width: 40%;
+        position: absolute;
+        right: 10px;
+        
+    }
+    .ww-nightlife-caption {
+        width: auto;
+    }
+}
+
+/* This is the footer section */
+.ww-footer-section {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+
+.ww-footer-social-list,
+.ww-footer-link-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ww-footer-left {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+.ww-footer-left ul li {
+    list-style: none;
+    text-align: center;
+    font-size: 14px;
+    padding-right: 10px;
+}
+
+.ww-footer-left li:last-child {
+    padding-right: 0;
+}
+
+.ww-footer-right {
+    order: -1;
+}
+
+.ww-footer-section a {
+    text-decoration: none;
+    color: white;
+}
+
+.ww-footer-section a:hover {
+
+}
+
+small {
+    display: block;
+    margin: auto;
 }

@@ -7,7 +7,7 @@
 // Display the results in the #weather-results div
 // Each new search should erase the previous results
 
-const myApiKey = "8440b2bca0044da0e62368b7c1817224";
+const myApiKey = "";
 
 async function handleWeatherRequest(e) {
   e.preventDefault();

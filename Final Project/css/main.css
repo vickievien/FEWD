@@ -699,15 +699,38 @@ Desktop-like size >=1200 */
     color: white;
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    padding: 30px 15px;
 }
 
+.ww-footer-link-list {
+    margin-bottom: 5px;
+}
+
+.ww-link-list-item > a {
+    padding-right: 5px;
+}
+
+.ww-link-list-item > a:last-child {
+    padding-right: 5px;
+}
 
 .ww-footer-social-list,
 .ww-footer-link-list {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.ww-footer-social-list {
+    margin-bottom: 10px;
+}
+
+.fab {
+    padding-right: 5px;
+}
+
+.fab:last-child {
+    padding-right: 0;
 }
 
 .ww-footer-left {
@@ -732,13 +755,15 @@ Desktop-like size >=1200 */
     order: -1;
 }
 
-.ww-footer-section a {
+.ww-footer-section a,
+.ww-footer-section a:hover {
     text-decoration: none;
     color: white;
+    transition: ease-in-out 1s;
 }
 
 .ww-footer-section a:hover {
-
+    color: var(--golden-brown);
 }
 
 small {
@@ -747,10 +772,64 @@ small {
 }
 
 .ww-footer-right {
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 
 .ww-form-title {
     margin: 0;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
 
+.email-submit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#email {
+    height: 35px;
+    font-size: 12px;
+    width: 200px;
+    padding-left: 10px;
+}
+
+input[type="submit"] {
+    background-color: var(--golden-brown);
+    transition: ease-in-out 1s;
+    padding: 5px 15px;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    height: 35px;
+    letter-spacing: 0.1rem;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--golden-yellow);
+}
+
+@media only screen and (min-width: 768px) {
+    .ww-footer-section {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .ww-footer-right {
+        order: 1;
+        margin-bottom: 0;
+    }
+    .email-submit-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #email {
+        margin-right: 10px;
+    }
 }

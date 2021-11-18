@@ -476,6 +476,7 @@ Desktop-like size >=1200 */
 @media only screen and (min-width: 1200px) {
     .ww-food-image {
         height: 80vh;
+        display: block;
     }
 }
 
@@ -668,16 +669,24 @@ Desktop-like size >=1200 */
         justify-content: center;
         align-items: center;
         padding: 30px;
-    
+        height: 80vh;
     }
     .ww-nightlife-image {
+        width: 100%;
+    }
+    .ww-nightlife-image-a {
         width: 55vw;
+        position: absolute;
+        left: 200px;
     }
     .ww-nightlife-text-container {
-        width: 40%;
+        width: 35%;
         position: absolute;
-        right: 10px;
-        
+        right: 200px;
+        transition: 0.2s ease-in-out;
+    }
+    .ww-nightlife-text-container:hover {
+        background-color: #d8d8d8;
     }
     .ww-nightlife-caption {
         width: auto;
@@ -702,11 +711,12 @@ Desktop-like size >=1200 */
 }
 
 .ww-footer-left {
-    /* display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; */
+    align-items: center;
 }
+
 .ww-footer-left ul li {
     list-style: none;
     text-align: center;
@@ -733,5 +743,14 @@ Desktop-like size >=1200 */
 
 small {
     display: block;
-    margin: auto;
+    margin: 5px auto;
+}
+
+.ww-footer-right {
+    margin-bottom: 10px;
+}
+
+.ww-form-title {
+    margin: 0;
+
 }

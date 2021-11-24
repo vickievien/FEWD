@@ -30,8 +30,8 @@
                     <li class="ww-nav-list-items"><a href="#">Inspiration</a></li>
                     <li class="ww-nav-list-items"><a href="#">Culinary Experience</a></li>
                     <li class="ww-nav-list-items"><a href="#">Budget & Advice</a></li>
-                    <li class="ww-nav-list-items nav-remove"><a href="#">Solo Travel</a></li>
-                    <li class="ww-nav-list-items nav-remove"><a href="#">Family Travel</a></li>               
+                    <li class="ww-nav-list-items"><a href="#">Solo Travel</a></li>
+                    <li class="ww-nav-list-items"><a href="#">Family Travel</a></li>               
                 </ul>
             </div>
         </nav>
@@ -97,6 +97,15 @@
         <a href="#"><img class="ww-food-image" src="./photos/wagyu-sushi-600.jpg" alt="wagyu-sushi"></a>
     </section>
 
+    <section class="ww-nightlife-section">
+        <a href="#" class="ww-nightlife-image-a"><img class="ww-nightlife-image" src="./photos/nightlife-600.jpg" alt="tokyo-nightlife"></a>
+        <div class="ww-nightlife-text-container">
+            <h2 class="ww-nightlife-title">Tokyo's Legendary Nightlife</h2>
+            <p class="ww-nightlife-caption">From hole-in-the-wall bars to extravagant nightclubs and everything in-between, there is no shortage of watering holes to be found in Tokyo.</p>
+            <a href="#" class="ww-btn ww-btn-card">Explore</a>
+        </div>
+    </section>
+
     <section class="ww-culture-section">
         <section class="ww-culture-text-container">
             <h2 class="ww-culture-title">Culture & Tradition</h2>
@@ -126,14 +135,6 @@
         </section>
     </section>
 
-    <section class="ww-nightlife-section">
-            <a href="#" class="ww-nightlife-image-a"><img class="ww-nightlife-image" src="./photos/nightlife-600.jpg" alt="tokyo-nightlife"></a>
-            <div class="ww-nightlife-text-container">
-                <h2 class="ww-nightlife-title">Tokyo's Legendary Nightlife</h2>
-                <p class="ww-nightlife-caption">From hole-in-the-wall bars to extravagant nightclubs and everything in-between, there is no shortage of watering holes to be found in Tokyo.</p>
-                <a href="#" class="ww-btn ww-btn-card">Explore</a>
-            </div>
-    </section>
 
     <section class="ww-gallery-section">
         <div class="big-gal-container">
@@ -144,24 +145,33 @@
         </hgroup>
         </div>
         <div class="thumb-gal-container">
-            <a class="prev" onclick="">&#10094;</a>
             <div class="thumb-gal-pic-container">
                 <img class="thumb-gal-pic" src="photos/shibuya-crossing-640.jpg" alt="Shibuya Crossing">
+                <h2 class="hidden-gal-subtitle">Shibuya, Tokyo</h2>
             </div>
-            <div class="thumb-gal-pic-container thumb-gal-mid-show">
-                <img class="thumb-gal-pic" src="photos/itsukushima-shrine-640.jpg" alt="Itsukushima Shrine">
-            </div>
-            <div class="thumb-gal-pic-container thumb-gal-mid-show">
+            <div class="thumb-gal-pic-container">
                 <img class="thumb-gal-pic" src="photos/chureito-pagoda-640.jpg" alt="Chureito Pagoda">
+                <h2 class="hidden-gal-subtitle">Fujiyoshida, Yamanashi</h2>
             </div>
-            <div class="thumb-gal-pic-container thumb-gal-lg-show">
+            <div class="thumb-gal-pic-container">
+                <img class="thumb-gal-pic" src="photos/itsukushima-shrine-640.jpg" alt="Itsukushima Shrine">
+                <h2 class="hidden-gal-subtitle">Hatsukaichi, Hiroshima</h2>
+            </div>
+            <div class="thumb-gal-pic-container">
                 <img class="thumb-gal-pic" src="photos/fushimi-inari-shrines-senbon-torii-640.jpg" alt="Fushimi Inari Shrine's Senbon Torii">
+                <h2 class="hidden-gal-subtitle">Fushimi Ward, Kyoto</h2>
             </div>
-            <div class="thumb-gal-pic-container thumb-gal-lg-show">
+            <div class="thumb-gal-pic-container">
                 <img class="thumb-gal-pic" src="photos/Shirakawa-go-2-640.jpg" alt="Shirakawa-go">
+                <h2 class="hidden-gal-subtitle">Shirakawa, Gifu</h2>
             </div>
-            <a class="next" onclick="">&#10095;</a> 
+            <div class="thumb-gal-pic-container">
+                <img class="thumb-gal-pic" src="photos/akihabara-tokyo-640.jpg" alt="Akihabara Tokyo">
+                <h2 class="hidden-gal-subtitle">Akihabara, Tokyo</h2>
+            </div>
         </div>
+    </section>
+
     </section>
 
     <footer class="ww-footer-section">
@@ -207,7 +217,7 @@
 
 
 
-    
+
     <script src="js/script.js"></script>
 </body>
 

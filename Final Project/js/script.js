@@ -26,13 +26,3 @@ thumbPic.forEach(n => {
 });
 
 
-// // This is to validate email form
-// function validateEmail (emailInput) {
-//     let mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-
-//     if (emailInput.value.match(mailFormat)) {
-//         alert('Thank you for subscribing!');
-//         document.ww-
-//         return true;
-//     }
-// }

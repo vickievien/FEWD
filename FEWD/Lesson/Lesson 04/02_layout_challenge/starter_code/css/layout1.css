@@ -1,0 +1,26 @@
+
+.exerciseHeader, .exerciseFooter, .exerciseMain {
+    margin: 0 10px 10px 10px;
+}
+
+.exerciseHeader, .exerciseFooter {
+    min-height: 150px;
+    max-height: 300px;
+}
+
+.exerciseMain {
+    min-height: 300px;
+    max-height: 600px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.exerciseMainContent {
+    background-color: aqua;
+    width: 66%;
+}
+
+.exerciseMainAside {
+    background-color: blueviolet;
+    width: 33%;
+}

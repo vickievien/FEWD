@@ -1,0 +1,79 @@
+
+.exerciseFooter, .exerciseMain {
+    margin: 0 10px 10px 10px;
+}
+
+.exerciseHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: flex-end;
+    height: 20vh;
+}
+
+.exerciseHeaderLogo {
+    width: 15%;
+    background-color: rgb(233, 88, 95);
+}
+
+.exerciseHeaderNav {
+    width: 75%;
+    display: flex;
+    justify-content: right;
+}    
+
+.exerciseHeaderNav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.exerciseHeaderNav ul li {
+    background-color: fuchsia;
+    width: 200px;
+}
+
+
+/* Main */
+
+.exerciseMain {
+    display: flex;
+    height: 60vh;
+}
+
+.exerciseMainLeftNav {
+    background-color: fuchsia;
+    width: 10%;
+    margin-right: 10px;
+}
+
+.exerciseMainContent {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+}
+
+.exerciseMainContentBanner {
+    width: 100%;
+    background-color: rgb(119, 216, 192);
+}
+
+.exerciseMainContentSubBanner {
+    background-color: rgb(111, 231, 107);
+    width: 75%;
+}
+
+.exerciseMainContentBlock {
+    background-color: indianred;
+    width: 25%;
+}
+
+.exerciseMainContent > * {
+    margin: 0;
+}
+
+.exerciseFooter {
+    background-color: fuchsia;
+    height: 20vh:
+}

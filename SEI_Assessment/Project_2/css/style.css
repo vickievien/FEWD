@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* THIS IS THE HEADER SECTION */
+header {
+    margin: 0;
+    padding: 0;
+}
+
+.vv-pic-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.vv-profile-pic {
+    display: block;
+    height: 150px;
+    width: 200px;
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+    border: 3px black solid;
+    border-radius: 10px;
+}
+
+.vv-header-pic {
+    width: 100%;
+    object-fit: cover;
+    height: 300px;
+    display: block;
+    opacity: 0.5;
+}
+
+.vv-nav {
+    background-color: black;
+    color: white;
+    padding: 15px;
+}
+
+.vv-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.vv-list-item {
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.vv-list-item:hover {
+    color: goldenrod;
+    transition: 1s ease-in-out;
+}
+
+@media only screen and (min-width: 768px) {
+    .vv-profile-pic {
+        height: 250px;
+        width: 350px;
+    }
+    .vv-header-pic {
+        height: 500px;
+    }
+}
+
+/* THIS IS THE MAIN SECTION */
+.vv-blog-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 30px;
+}
+
+.vv-blog-card {
+    border: 1px solid rgb(199, 199, 199);
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.vv-blog-pic {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.vv-blog-text-wrap {
+    padding: 20px;
+}
+
+.vv-blog-title {
+    font-size: 24px;
+}
+
+.vv-blog-caption {
+    margin: 10px 0;
+    line-height: 24px;
+}
+
+.vv-btn,
+.vv-btn:visited {
+    display: block;
+    width: max-content;
+    padding: 10px 15px;
+    background-color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.vv-btn:hover {
+    background-color: goldenrod;
+    color: black;
+    transition: 1s ease-in-out;
+}
+
+@media only screen and (min-width: 768px) {
+    .vv-blog-section {
+        padding: 50px 70px;
+    }
+    .vv-blog-card {
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .vv-blog-section {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 40px;
+    }
+    .vv-blog-card {
+        height: 525px;
+    }
+    .vv-blog-pic {
+        height: 50%;
+    }
+    .vv-blog-text-wrap {
+        padding-bottom: 10px;
+    }
+    .vv-btn {
+        margin-top: 15px;
+}

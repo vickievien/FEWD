@@ -1,0 +1,61 @@
+/* Global Updates */
+
+* {
+    box-sizing: border-box;
+}
+
+/* Main Body */
+body {
+    margin: 0;
+    padding-left: 100px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url("https://i.imgur.com/Yye8vO6.jpg");
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.vv-text-container {
+    width: 35vw;
+}
+
+.vv-title {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 200;
+}
+
+span {
+    color: rgb(146, 110, 31);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: underline;
+    letter-spacing: 0.5px;
+}
+
+.vv-subtitle {
+    margin: 20px 0;
+    font-size: 40px;
+    line-height: 55px;
+}
+
+.vv-content {
+    height: auto;
+    font-size: 14px;
+}
+
+.vv-btn {
+    margin: 30px 0;
+    padding: 15px 15px;
+    width: max-content;
+    display: block;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    border: 3px rgb(146, 110, 31) solid;
+    border-radius: 10px;
+    background-color: rgb(146, 110, 31);
+}

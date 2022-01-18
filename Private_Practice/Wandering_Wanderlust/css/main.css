@@ -45,6 +45,18 @@ body {
     align-items: center;
 }
 
+.ww-logo-container a {
+    padding: 0;
+}
+
+.logo-japan-edit {
+    color: white;
+    text-transform: uppercase;
+    margin-left: 20px;
+    font-size: 14px;
+    letter-spacing: 0.1rem;
+}
+
 .ww-logo {
     margin: 0;
     padding-top: 10px;
@@ -321,13 +333,21 @@ body {
 .ww-main-attract-card-caption {
     font-weight: 300;
     line-height: 1.5rem;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
+}
+
+.card-btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .city-offers {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .city-item {
@@ -345,9 +365,13 @@ body {
     padding-right: 0;
 }
 
+.city-item > .fas {
+    color: rgb(68, 68, 68);
+}
+
 .ww-btn-card,
 .ww-btn-card:visited {
-    margin: 0 auto 40px auto;
+    margin-bottom: 20px;
     padding: 10px 15px;
     width: 60%;
     display: block;
@@ -396,24 +420,30 @@ body {
         height: 50%;
     }
     .ww-main-attract-card-image {
-        height: 100%;
-        width: 100%;
+        /* height: 100%; */
+        /* width: 130%; */
         object-fit: cover;
+        object-position: center;
+        overflow: hidden;
     }
 
     .card-btn-container {
         /* min-height: 10%; */
         display: flex;
         justify-content: center;
-        align-items: baseline;
+        align-items: center;
+        margin: 0;
     }
 
     .ww-btn-card,
     .ww-btn-card:visited {
-        margin-top: 10px;
-        padding: 10px 30px;
+        /* margin-top: 10px; */
+        /* display: block; */
+        /* padding: 10px 30px; */
+        display: inline-block;
         width: auto;
         font-size: 14px;
+        margin-bottom: 20px;
     }  
 } 
 

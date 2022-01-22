@@ -1,16 +1,22 @@
-let appText = document.querySelector('.appetizer');
-appText.innerText = appText.className;
-appText.style.textTransform = "capitalize";
+const appType = document.querySelector('.appetizer');
+const appText = document.createElement('h3');
+appType.parentElement.appendChild(appText);
+const appPrice = document.createElement('h4');
+appType.parentElement.appendChild(appPrice);
 
-let mainText = document.querySelector('.main');
-mainText.style.textTransform = "capitalize";
+const mainType = document.querySelector('.main');
+const mainText = document.createElement('h3');
+mainType.parentElement.appendChild(mainText);
+const mainPrice = document.createElement('h4');
+mainType.parentElement.appendChild(mainPrice);
 
-let desText = document.querySelector('.dessert');
-desText.style.textTransform = "capitalize";
+const desType = document.querySelector('.dessert');
+const desText = document.createElement('h3');
+desType.parentElement.appendChild(desText);
+const desPrice = document.createElement('h4');
+desType.parentElement.appendChild(desPrice);
 
-const totalP = document.createElement('h2');
-document.body.appendChild(totalP);
-
+const totalP = document.querySelector('.total');
 
 const menu = {
     _courses: {
@@ -18,20 +24,6 @@ const menu = {
      mains: [],
      desserts: [],
     },
-
-    // get app() {},
-    // set app(appIn) {},
-    // get main() {},
-    // set main(mainIn) {},
-    // get des() {},
-    // set des(desIn) {},
-    // get course() {
-    //   return {
-    //     appetizers: this.appetizers,
-    //     mains: this.mains,
-    //     desserts: this.desserts,
-    //   };
-    // },
 
     addDishToCourse(courseName, dishName, dishPrice) {
       const dish = {
@@ -58,12 +50,15 @@ const menu = {
       const dessert = this.getRandomDishFromCourse('desserts');
       const totalPrice = appetizer.price + main.price + dessert.price;
       
-      appText.innerText = `${appText.className}: ${appetizer.name} $${appetizer.price}`
-      mainText.innerText = `${mainText.className}: ${main.name} $${main.price}`
-      desText.innerText = `${desText.className}: ${dessert.name} $${dessert.price}`
-      totalP.innerText = `Total Price: $${totalPrice}`
+      appText.innerText = `${appetizer.name}`
+      appPrice.innerText = `$${appetizer.price.toFixed(2)}`
+      mainText.innerText = `${main.name}`
+      mainPrice.innerText = `$${main.price.toFixed(2)}`
+      desText.innerText = `${dessert.name}`
+      desPrice.innerText = `$${dessert.price.toFixed(2)}`
+      totalP.innerText = `Total: $${totalPrice.toFixed(2)}`
 
-      return `Today's menu:
+      return `
         Appetizer: ${appetizer.name} $${appetizer.price}
         Main course: ${main.name} $${main.price}
         Dessert: ${dessert.nampe} $${dessert.price}

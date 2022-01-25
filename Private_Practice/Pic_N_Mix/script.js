@@ -87,6 +87,10 @@ document.querySelector('.title-page-btn').addEventListener('click', nextSection)
 
 
 // ROUND 1 - WORKS BUT NOT INDIVIDUAL DIV
+const weightDisp = document.querySelectorAll('.candy-weight')
+
+
+
 let weight = 0;
 
 function weightGain() {

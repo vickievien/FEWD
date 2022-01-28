@@ -18,23 +18,12 @@ body {
 }
 
 /* This is the header */
-.ww-announce-bar {
-    display: none;
-    padding: 8px;
-    background-color: var(--golden-brown);
-    color: white;
-    font-size: 0.8rem;
-    font-weight: 400;
-    font-style: italic;
-    letter-spacing: 0.1rem;
-    text-align: center;
-}
 
 .ww-nav-container {
-    padding: 20px 40px;
+    padding: 10px 40px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     background-color: black;
 }
 .ww-logo-container {
@@ -60,7 +49,7 @@ body {
 .ww-logo {
     margin: 0;
     padding-top: 10px;
-    width: 10vw;
+    width: 7vw;
     color: white;
     text-decoration: none;
     text-transform: uppercase;
@@ -136,7 +125,7 @@ body {
         display: flex;
         justify-content: space-between;
         font-size: 0.5rem;
-        gap: 10px;
+        gap: 20px;
     }
     .ww-nav-list-items {
         font-size: 12px;
@@ -256,199 +245,90 @@ body {
     }
 }
 
-/* THis is the Attraction Cards Section */
-.ww-main-attract-section {
-    padding: 60px 10px 20px 10px;
+/* This is the nightlife section */
+.ww-nightlife-section {
+    margin: 50px auto; /*edit later*/
+    display: flex;
+    flex-direction: column;
 }
-.ww-main-attract-head {
-    margin-bottom: 40px;
-    padding: 0 10px;
+
+.ww-nightlife-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    
+}
+.ww-nightlife-text-container {
+    padding: 20px;
+    background-color: #ebebeb;
     text-align: center;
 }
 
-.ww-main-attract-title {
-    padding-bottom: 10px;
+.ww-nightlife-title {
+    margin-bottom: 15px;
     font-size: 26px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.15rem;
 }
 
-.ww-main-attract-subtitle {
+.ww-nightlife-caption {
     font-size: 16px;
+    font-weight: 500;
     text-transform: uppercase;
-    padding: 0 10px;
-}
-
-.city-filter-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.city-filter-title {
-    font-weight: 300;
-    font-size: 20px;
-    margin-bottom: 5px;
-}
-
-#city-filter {
-    padding: 5px;
-    width: 225px;
-    text-align: center;
-}
-
-.ww-main-attract-card-container {
-    display: grid;
-    grid-template-columns: 1fr;
-}
-
-.ww-main-attract-card {
-    margin-bottom: 40px;
-    width: 85vw;
-    justify-self: center;
-    background-color: #f7f7f7;
-    border: 0.01rem solid #f1f1f1;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.ww-main-attract-card-image {
-    width: 100%;
-    object-fit: cover;
-}
-
-.ww-main-attract-card-text-container {
-    padding: 20px 25px;
-    text-align: center;
-}
-
-.ww-main-attract-card-title {
-    padding-bottom: 20px;
-    text-transform: uppercase;
-}
-
-.ww-main-attract-card-caption {
-    font-weight: 300;
     line-height: 1.5rem;
-    /* padding-bottom: 20px; */
 }
 
-.card-btn-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.city-offers {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.city-item {
-    list-style: none;
-    font-weight: 300;
-    font-size: 14px;
-    padding-right: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.city-item:last-child {
-    padding-right: 0;
-}
-
-.city-item > .fas {
-    color: rgb(68, 68, 68);
-}
-
-.ww-btn-card,
-.ww-btn-card:visited {
-    margin-bottom: 20px;
-    padding: 10px 15px;
-    width: 60%;
-    display: block;
-    background-color: black;
-}
-
-.ww-btn-card:hover {
-    background-color: var(--golden-brown);
+.ww-nightlife-text-container .ww-btn-card {
+    margin: 10px auto;
+    display: inline-block;
 }
 
 @media only screen and (min-width: 768px) {
-    .ww-main-attract-section {
-        padding-bottom: 60px;
+    .ww-nightlife-text-container {
+        padding: 40px;
     }
-
-    .ww-main-attract-card {
-        width: 55vw;
+    .ww-nightlife-caption {
+        margin: auto;
+        padding-bottom: 15px;
+        width: 600px;
     }
 }
 
 @media only screen and (min-width: 1200px) {
-    .ww-main-attract-section {
-        padding: 60px 10px;
-    }
-    .ww-main-attract-card-container {
-        padding: 0 60px;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 3rem;
-    }
-    .ww-main-attract-card {
-        margin-bottom: 0;
-        width: 100%;
-        will-change: transform;
-        transition: transform 450ms;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .ww-main-attract-card:hover {
-        transform: translateY(-10px);
-        transition: transform 450ms;
-    }
-
-    .ww-main-attract-card a {
-        height: 50%;
-    }
-    .ww-main-attract-card-image {
-        /* height: 100%; */
-        /* width: 130%; */
-        object-fit: cover;
-        object-position: center;
-        overflow: hidden;
-    }
-
-    .card-btn-container {
-        /* min-height: 10%; */
-        display: flex;
+    .ww-nightlife-section {
+        padding: 30px;
+        height: 80vh;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin: 0;
+        margin: 100px auto;
     }
-
-    .ww-btn-card,
-    .ww-btn-card:visited {
-        /* margin-top: 10px; */
-        /* display: block; */
-        /* padding: 10px 30px; */
-        display: inline-block;
+    .ww-nightlife-image {
+        width: 100%;
+    }
+    .ww-nightlife-image-a {
+        width: 55vw;
+        position: absolute;
+        left: 200px;
+    }
+    .ww-nightlife-text-container {
+        width: 35%;
+        position: absolute;
+        right: 200px;
+        transition: 0.2s ease-in-out;
+    }
+    .ww-nightlife-text-container:hover {
+        background-color: #d8d8d8;
+    }
+    .ww-nightlife-caption {
         width: auto;
-        font-size: 14px;
-        margin-bottom: 20px;
-    }  
-} 
+    }
+}
 
-/* Food section */
-.ww-food-section {
+/* Food Section */
+.ww-food-section2 {
     margin-bottom: 50px;
     padding: 0;
     display: grid;
@@ -456,19 +336,19 @@ body {
     background-color: var(--golden-brown);
 }
 
-.ww-food-content-container {
+.ww-food-content-container2 {
     padding: 10px 20px 10px 10px;
     display: flex;
     align-items: center;
     text-align: right;
 }
 
-.ww-food-text-container {
+.ww-food-text-container2 {
     padding: 10px 0 10px 10px;
     color: black;
 }
 
-.ww-food-title {
+.ww-food-title2 {
     font-size: 36px;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
@@ -479,7 +359,7 @@ body {
     color: white;
 }
 
-.ww-food-text {
+.ww-food-text2 {
     margin: 10px auto 0 auto;
     font-size: 16px;
     font-weight: 700;
@@ -487,41 +367,41 @@ body {
     line-height: 1.5rem;
 }
 
-.ww-food-image {
+.ww-food-image2 {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.ww-food-section a {
+.ww-food-section2 a {
     margin: 0;
     padding: 0;
     text-decoration: none;
 }
 
 @media only screen and (min-width: 768px) {
-    .ww-food-section {
+    .ww-food-section2 {
         margin-bottom: 100px;
         grid-template-columns: 2fr 3fr;
         background-color: black;
     }
-    .ww-food-content-container {
+    .ww-food-content-container2 {
         position: relative;
         left: 100px;
     }
-    .ww-food-text-container {
+    .ww-food-text-container2 {
         padding: 20px 30px;
         background-color: var(--golden-brown);
         transition: ease-in-out 1s;
         color: black;
     }
-    .ww-food-text-container:hover {
+    .ww-food-text-container2:hover {
         background-color: var(--golden-yellow);
     }
-    .ww-food-title {
+    .ww-food-title2 {
         font-size: 48px;
     }
-    .ww-food-text {
+    .ww-food-text2 {
         margin-left: 20px;
         font-size: 24px;
         line-height: 2rem;
@@ -529,7 +409,10 @@ body {
 }
 
 @media only screen and (min-width: 1200px) {
-    .ww-food-image {
+    .ww-food-section2 {
+        margin: 0 75px 100px 75px;
+    }
+    .ww-food-image2 {
         height: 80vh;
         display: block;
     }
@@ -666,87 +549,6 @@ body {
     }
 }
 
-/* This is the nightlife section */
-.ww-nightlife-section {
-    margin-bottom: 50px; /*edit later*/
-    display: flex;
-    flex-direction: column;
-}
-
-.ww-nightlife-image {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    
-}
-.ww-nightlife-text-container {
-    padding: 20px;
-    background-color: #ebebeb;
-    text-align: center;
-}
-
-.ww-nightlife-title {
-    margin-bottom: 15px;
-    font-size: 26px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.15rem;
-}
-
-.ww-nightlife-caption {
-    font-size: 16px;
-    font-weight: 500;
-    text-transform: uppercase;
-    line-height: 1.5rem;
-}
-
-.ww-nightlife-text-container .ww-btn-card {
-    margin: 10px auto;
-    display: inline-block;
-}
-
-@media only screen and (min-width: 768px) {
-    .ww-nightlife-text-container {
-        padding: 40px;
-    }
-    .ww-nightlife-caption {
-        margin: auto;
-        padding-bottom: 15px;
-        width: 600px;
-    }
-}
-
-@media only screen and (min-width: 1200px) {
-    .ww-nightlife-section {
-        padding: 30px;
-        height: 80vh;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-    .ww-nightlife-image {
-        width: 100%;
-    }
-    .ww-nightlife-image-a {
-        width: 55vw;
-        position: absolute;
-        left: 200px;
-    }
-    .ww-nightlife-text-container {
-        width: 35%;
-        position: absolute;
-        right: 200px;
-        transition: 0.2s ease-in-out;
-    }
-    .ww-nightlife-text-container:hover {
-        background-color: #d8d8d8;
-    }
-    .ww-nightlife-caption {
-        width: auto;
-    }
-}
-
 /* This is the gallery section */
 .ww-gallery-section {
     padding: 20px 40px 40px 40px;
@@ -844,6 +646,7 @@ body {
 @media only screen and (min-width: 1200px) {
     .ww-gallery-section {
         padding-top: 40px;
+        margin: 40px auto;
     }
     .thumb-gal-container {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -1001,4 +804,321 @@ input[type="submit"]:hover {
 }
 
 
+/* This is the cities.html and food.html page - page heading section only */
+.ww-main-attract-section,
+.ww-food-section {
+    padding: 60px 10px 20px 10px;
+}
 
+.ww-main-attract-head,
+.ww-food-head {
+    margin-bottom: 40px;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.ww-main-attract-title,
+.ww-food-title {
+    padding-bottom: 10px;
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+}
+
+.ww-main-attract-subtitle,
+.ww-food-subtitle {
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 0 10px;
+}
+
+.city-filter-container,
+.food-filter-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.city-filter-title,
+.food-filter-title {
+    font-weight: 300;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+#city-filter,
+#food-filter {
+    padding: 5px;
+    width: 225px;
+    text-align: center;
+}
+
+/* This is the cities.html page - grid section */
+.ww-main-attract-card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.ww-main-attract-card {
+    margin-bottom: 40px;
+    width: 85vw;
+    justify-self: center;
+    background-color: #f7f7f7;
+    border: 0.01rem solid #f1f1f1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.ww-main-attract-card-image {
+    width: 100%;
+    object-fit: cover;
+}
+
+.ww-main-attract-card-text-container {
+    padding: 20px 25px;
+    text-align: center;
+}
+
+.ww-main-attract-card-title {
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.ww-main-attract-card-caption {
+    font-weight: 300;
+    line-height: 1.5rem;
+    /* padding-bottom: 20px; */
+}
+
+.card-btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.city-offers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.city-item {
+    list-style: none;
+    font-weight: 300;
+    font-size: 14px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.city-item:last-child {
+    padding-right: 0;
+}
+
+.city-item > .fas {
+    color: rgb(68, 68, 68);
+}
+
+.ww-btn-card,
+.ww-btn-card:visited {
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    width: 60%;
+    display: block;
+    background-color: black;
+}
+
+.ww-btn-card:hover {
+    background-color: var(--golden-brown);
+}
+
+@media only screen and (min-width: 530px) {
+    .ww-main-attract-card {
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .ww-main-attract-section {
+        padding-bottom: 60px;
+    }
+    .ww-main-attract-card-container {
+        padding: 0 60px;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+    .ww-main-attract-card {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .ww-main-attract-section {
+        padding: 60px 10px;
+    }
+    .ww-main-attract-card-container {
+        padding: 0 60px;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 25px;
+    }
+    .ww-main-attract-card {
+        margin-bottom: 10px;
+        width: 100%;
+        will-change: transform;
+        transition: transform 450ms;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .ww-main-attract-card:hover {
+        transform: translateY(-10px);
+        transition: transform 450ms;
+    }
+
+    .ww-main-attract-card a {
+        height: 50%;
+    }
+    .ww-main-attract-card-image {
+        /* height: 100%; */
+        /* width: 130%; */
+        object-fit: cover;
+        object-position: center;
+        overflow: hidden;
+    }
+
+    .card-btn-container {
+        /* min-height: 10%; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .ww-btn-card,
+    .ww-btn-card:visited {
+        /* margin-top: 10px; */
+        /* display: block; */
+        /* padding: 10px 30px; */
+        display: inline-block;
+        width: auto;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }  
+} 
+
+/* This is the food.html page - grid section */
+.ww-food-grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 40px 40px 40px;
+}
+
+.ww-food-card-container {
+    margin: 15px auto;
+    overflow: hidden;
+    background-color: #f7f7f7;
+    background-image: linear-gradient(to bottom right, rgb(236, 236, 236), rgba(255, 255, 255, 0.815));
+    border-radius: 10px;
+}
+
+.ww-food-image {
+    width: 100%;
+    object-fit: cover;
+}
+
+.ww-food-text-wrap {
+    padding: 12px 20px;
+}
+
+.ww-food-title-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.ww-food-title-wrap .fas {
+    color:rgb(179, 179, 179);
+}
+
+.ww-food-title-wrap .fa-angle-down {
+    margin-left: 5px;
+    color: black;
+}
+
+.food-caption {
+    margin-top: 10px;
+    display: none;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5rem;
+    transition: height 5s;
+}
+
+.show-cap {
+    display: block;
+}
+
+.food-btn {
+    margin-top: 10px;
+    padding: 10px 15px;
+    width: fit-content;
+    display: block;
+    background-color: black;
+    transition: 1s ease-in-out;
+    color: white;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0.05rem;
+    border-radius: .3rem;
+}
+
+.food-btn:hover {
+    background-color: var(--golden-brown);
+}
+
+@media only screen and (min-width: 530px) {
+    .ww-food-card-container {
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .ww-food-grid-container {
+        padding: 0 50px 50px 50px;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+    .ww-food-card-container {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .ww-food-section {
+        padding-bottom: 0;
+    }
+    .ww-food-grid-container {
+        padding: 0px 70px 70px 70px;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 25px;
+    }
+    .ww-food-card-container {
+        margin: 0 auto 10px auto;
+    }
+    .ww-food-card-title {
+        font-size: 16px;
+    }
+
+} 

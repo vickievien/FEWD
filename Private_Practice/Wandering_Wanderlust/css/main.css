@@ -1123,7 +1123,9 @@ input[type="submit"]:hover {
 
 } 
 
-/* Facts Section */
+/* FACTS PAGE */
+
+/* OVERALL FACTS PAGE */
 .fact-grid-container {
     display: grid;
     grid-template-rows: 1fr 2fr;
@@ -1157,13 +1159,14 @@ input[type="submit"]:hover {
     font-size: 18px;
 }
 
-.weather-sect {
+.fact-section {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
+/* TEMPERATURE SECTION */
 .current-temp-icon-wrap {
     display: flex;
     justify-content: center;
@@ -1194,16 +1197,79 @@ input[type="submit"]:hover {
     font-weight: 700;
 }
 
+/* CURRENCY SECTION */
+.curr-sub {
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.1rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+#curr-form {
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+input[type="string"] {
+    font-size: 14px;
+}
+
+.base-curr {
+    font-size: 14px;
+}
+
+.jpy-curr {
+    font-size: 50px;
+}
+.curr-input {
+    max-width: 30px;
+}
+
+.base-curr-type {
+    display: inline;
+    /* align-items: center; */
+    padding: 0 15px 0 3px;
+}
+
+#enter-curr {
+    height: auto;
+    padding: 7px 10px;
+    text-align: right;
+}
+
+/* TRANSPORTATION SECTION */
 .transpo-list {
     font-weight: 300;
     font-size: 18px;
-    margin-bottom: 10px;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
 }
 
 .transpo-items {
-    list-style: circle;
-    width: fit-content;
-    margin-left: 30%;
+    list-style: none;
+    /* height: 100px;
+    width: 100px; */
+}
+
+.transpo-a {
+    height: 100px;
+    width: 100px;
+}
+
+.transpo-pic {
+    background-color: blueviolet;
+    height: 100px;
+    width: 100px;
+}
+
+.transpo-name {
+    font-size: 14px;
+    font-weight: 300;
 }
 
 .fact-btn,
@@ -1228,7 +1294,9 @@ input[type="submit"]:hover {
     .fact-grid-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 20px;
+        grid-template-rows: 1fr;
+        gap: 25px;
+        margin: 60px;
     }
     
     .fact-aside-grid-wrap {

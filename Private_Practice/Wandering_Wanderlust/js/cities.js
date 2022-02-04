@@ -15,8 +15,10 @@ document.addEventListener('DOMContentLoaded', function(event) {
         let selectedFilter = this.value;
 
         document.querySelectorAll('.ww-main-attract-card').forEach(n => {
+            
             if (n.classList.contains(selectedFilter) || selectedFilter === 'all') {
-                n.style.display = 'grid-item';
+                n.style.display = 'block';
+                console.log(n.classList);
             } else {
                 n.style.display = 'none';
             }

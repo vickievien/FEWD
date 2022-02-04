@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
         foodCards.forEach(n => {
             if (n.classList.contains(selectedFilter)) {
-                n.style.display = 'grid-item'
+                n.style.display = 'block'
             } else {
                 n.style.display = 'none';
             }

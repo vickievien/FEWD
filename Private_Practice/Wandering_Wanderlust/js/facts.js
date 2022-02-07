@@ -94,6 +94,11 @@ document.addEventListener('DOMContentLoaded', function(event) {
     const iArr = document.querySelectorAll('.transpo-pic');
     const nameArr = document.querySelectorAll('.transpo-name');
 
+    iArr.forEach(n => {
+        n.setAttribute('target', '_blank');
+        console.log('loop working');
+    });
+
     const pixKey = '25546901-7f4380bdba51cf6930b1348ea'
 
     async function callPix() {
@@ -101,110 +106,30 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
         const pixResp = await fetch(pixUrl);
         const pixData = await pixResp.json();
+
+        console.log(pixData);
     
-        function randSet(quantity, max) {
+        function randSet(max) {
             const randArr = [];
-            while(randArr.length < quantity) {
-                randArr.push(Math.floor(Math.random() * max))
+            while(randArr.length < 4) {
+                let r = Math.floor(Math.random() * max);
+                if (randArr.indexOf(r) === -1) randArr.push(r);
             }
             return randArr;
         }
-    
-        const randNums = randSet(4, pixData.hits.length);
-        console.log(randNums);
+
+        const randNums = randSet(pixData.hits.length);
+        // console.log(randNums);
     
         for (let i=0; i<liArr.length; i++) {
-            aArr[i].setAttribute('href', pixData.hits[randNums[i].pageURL]);
-            iArr[i].setAttribute('src', pixData.hits[randNums[i].largeImageURL]);
-            iArr[i].setAttribute('alt', pixData.hits[randNums[i].tags]);
+            // console.log(aArr[i]);
+            aArr[i].setAttribute('href', pixData.hits[randNums[i]].largeImageURL);
+            iArr[i].setAttribute('src', pixData.hits[randNums[i]].largeImageURL);
+            iArr[i].setAttribute('alt', pixData.hits[randNums[i]].tags);
         }
     }
 
     callPix();
-
-
-    
-
-
-    // const transport = {
-    //     name: [
-    //         'Nagoya Bus',
-    //         'Ferries',
-    //         'Highway Buses',
-    //         'Shinkansen',
-    //         'Taxis',
-    //         'Osaka Loop Line',
-    //         'Kyoto Buses',
-    //         'Osaka Monorail',
-    //         'Chuo Line'
-    //         ],
-    //     href: [
-    //         'https://www.kotsu.city.nagoya.jp/en/pc/BUS/TRP0000987.htm',
-    //         'https://www.japanvisitor.com/japan-travel/japan-transport/japan-ferry',
-    //         'https://www.japanvisitor.com/japan-travel/japan-transport/highway-buses',
-    //         'https://www.japanvisitor.com/japan-travel/shinkansen',
-    //         'https://www.japanvisitor.com/japan-travel/japan-transport/japan-taxis',
-    //         'https://www.japanvisitor.com/japan-travel/osaka-loop-line',
-    //         'https://www.japanvisitor.com/japan-transport/kyoto-buses',
-    //         'https://www.japanvisitor.com/japan-transport/osaka-monorail',
-    //         'https://www.japanvisitor.com/japan-transport/chuolinenagoya'
-    //     ],
-    //     src: [
-    //         'https://www.japanvisitor.com/images/content_images/nagoyabus2018-3.jpg',
-    //         'https://www.japanvisitor.com/images/content_images/japan-ferry-pass-3.jpg',
-    //         'https://www.japanvisitor.com/images/content_images/highwaybus20189.jpg',
-    //         'https://www.japanvisitor.com/images/content_images/shinkansen-2017-44.jpg',
-    //         'https://www.japanvisitor.com/images/content_images/kochi-taxi-2017-1.jpg',
-    //         'https://www.japanvisitor.com/images/content_images/osaka-power-loop.jpg',
-    //         'https://www.japanvisitor.com/images/content_images/kyoto-bus-2018-1.jpg',
-    //         'https://www.japanvisitor.com/images/content_images/osaka-monorail-1.jpg',
-    //         'https://www.japanvisitor.com/images/content_images/tsurumai-station-2017-2x.jpg'
-    //         ]
-    // }   
-
-
-    
-
-
-
-
-
-    // const transpoList = document.querySelector(".transpo-list");
-    
-    // const transpoListLi = document.createElement('li');
-    // transpoListLi.setAttribute('class', 'transpo-li');
-    
-    // const transpoAlink = document.createElement('a');
-    // transpoAlink.setAttribute('class', 'transpo-a');
-
-    // const transpoPic = document.createElement('img');
-    // transpoPic.setAttribute('class', 'transpo-pic');
-
-    // transpoList.appendChild(transpoListLi);
-    // transpoList.appendChild(transpoListLi);
-    // transpoList.appendChild(transpoListLi);
-
-    // for (let i=1; i<4; i++) {
-    //     transpoList.appendChild(transpoListLi);
-    //     console.log('loop works')
-    // }
-
-    // const transpoListLiArray = document.querySelectorAll('.transpo-items');
-    
-    // transpoListLiArray.forEach(n => {
-    //     n.appendChild(transpoAlink);
-    // });
-
-
-
-
-
-
-
-
-
-
-
 
 
 });

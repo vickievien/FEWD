@@ -46,45 +46,41 @@
     
         <aside class="fact-aside-grid-wrap">
             <section class="fact-section currency-sect">
-                <h2 class="curr-sub">Convert USD to JPY:</h2>
                 <form action="" id="curr-form">
-                    <input type="string" id="base-curr" class="curr-input" placeholder="USD">
-                    <p class="base-curr-type">USD</p>
-                    <!-- <i class="fas fa-exchange-alt"></i> -->
-                    <!-- <input type="string" id="target-curr" class="curr-input"> -->
-                    <input type="submit" value="Enter" id="enter-curr" placeholder="JPY">
+                    <fieldset class="curr-form-field">
+                        <legend class="curr-sub">Convert USD to JPY:</legend>
+                        <input type="string" id="base-curr" class="curr-input" placeholder="USD">
+                        <label class="base-curr-type">USD</label>
+                        <input type="submit" value="Enter" id="enter-curr">
+                    </fieldset>
                 </form>
             </section>
             <section class="fact-section transpo-sect">
-                <h2 class="fact-sect-title">Transportation</h2>
-                <p class="fact-sect-caption">Get around Japan with its many excellent transportation.</p>
+                <h2 class="fact-sect-title">Public Transport</h2>
+                <p class="fact-sect-caption">Get around Japan with its many efficient transportation</p>
                 <ul class="transpo-list">
                     <li class="transpo-items">
                         <a href="" class="transpo-a">
                             <img src="" alt="" class="transpo-pic">
                         </a>
-                        <p class="transpo-name">Lorem</p>
                     </li>
                     <li class="transpo-items">
                         <a href="" class="transpo-a">
                             <img src="" alt="" class="transpo-pic">
                         </a>
-                        <p class="transpo-name">Lorem</p>
                     </li>                    
                     <li class="transpo-items">
                         <a href="" class="transpo-a">
                             <img src="" alt="" class="transpo-pic">
                         </a>
-                        <p class="transpo-name">Lorem</p>
                     </li>
                     <li class="transpo-items">
                         <a href="" class="transpo-a">
                             <img src="" alt="" class="transpo-pic">
                         </a>
-                        <p class="transpo-name">Lorem</p>
                     </li>
                 </ul>
-                <a href="https://www.japan-guide.com/e/e627.html" target="_blank" class="fact-btn ">More</a>
+                <a href="https://www.japan-guide.com/e/e627.html" target="_blank" class="fact-btn ">Learn More</a>
             </section>
         </aside>
     </div>
@@ -112,13 +108,15 @@
             <small>&copy; 2021 The Wandering Wanderlust</small>
         </div>
         <div class="ww-footer-right">
-            <h1 class="ww-form-title">Subscribe Now</h1>
-            <form action="#" method="post" class="ww-subscribe-form"></form>
-                <label for="email"></label>
-                <div class="email-submit-container">
-                    <input type="email" name="email" id="email" placeholder="Your e-mail here">
-                    <input type="submit">
-                </div>
+            <form action="#" method="post" class="ww-subscribe-form">
+                <fieldset class="ww-form-wrap">
+                    <legend class="ww-form-title">Subscribe Now</legend>
+                    <div class="email-submit-container">
+                        <input type="email" name="email" id="email" placeholder="Your e-mail here">
+                        <input type="submit">
+                    </div>
+                </fieldset>
+            </form>
         </div>
     </footer>
 

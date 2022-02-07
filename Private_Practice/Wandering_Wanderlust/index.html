@@ -61,9 +61,12 @@
                 <h2 class="ww-food-title2">A Cuisine <span>Capital<span></h1>
                 <hr>
                 <p class="ww-food-text2">From street eats to fine dining. It's a foodie's paradise.</p>
+                <div class="food-btn-wrap">
+                    <a href="foods.html" class="ww-btn ww-btn-card ww-food-btn">Explore</a>
+                </div>
             </div>
         </div>
-        <a href="#"><img class="ww-food-image2" src="./photos/wagyu-sushi-600.jpg" alt="wagyu-sushi"></a>
+        <a href="#" class="food-img-a"><img class="ww-food-image2" src="./photos/wagyu-sushi-600.jpg" alt="wagyu-sushi"></a>
     </section>
 
     <section class="ww-culture-section">
@@ -154,13 +157,15 @@
             <small>&copy; 2021 The Wandering Wanderlust</small>
         </div>
         <div class="ww-footer-right">
-            <h1 class="ww-form-title">Subscribe Now</h1>
-            <form action="#" method="post" class="ww-subscribe-form"></form>
-                <label for="email"></label>
-                <div class="email-submit-container">
-                    <input type="email" name="email" id="email" placeholder="Your e-mail here">
-                    <input type="submit">
-                </div>
+            <form action="#" method="post" class="ww-subscribe-form">
+                <fieldset class="ww-form-wrap">
+                    <legend class="ww-form-title">Subscribe Now</legend>
+                    <div class="email-submit-container">
+                        <input type="email" name="email" id="email" placeholder="Your e-mail here">
+                        <input type="submit">
+                    </div>
+                </fieldset>
+            </form>
         </div>
     </footer>
 

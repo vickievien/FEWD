@@ -11,11 +11,10 @@ body {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     min-height: 100vh;
-    position: relative;
 }
 
 .main-body {
-    margin: 50px;
+    margin: 50px 50px 75px 50px;
 }
 
 .page-title {
@@ -158,7 +157,7 @@ footer {
     align-items: center;
     font-size: 12px;
     padding: 15px 30px;
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     width: 100%;
 }
@@ -239,41 +238,6 @@ body.portfolio-body {
     transition: transform 450ms;
 }
 
-/* .skill-cont-1 {
-    background-color: #83d1c4;
-    background-color: #d8318a;
-}
-
-.skill-cont-2 {
-    background-color: #78517c;
-    background-color: #f26c7d;
-}
-
-.skill-cont-3 {
-    background-color: #f17950;
-    background-color: #e37439;
-} */
-
-.skill-icon {
-    font-size: 36px;
-}
-
-.skill-cont-1 .skill-icon {
-    /* color: #69a59b;     */
-    /* color: #e09dc1; */
-}
-
-.skill-cont-2 .skill-icon {
-    /* color: #a572aa;   */
-    /* color: #f5c5cb; */
-}
-
-.skill-cont-3 .skill-icon {
-    /* color: #e78c6d;    
-    color: #e7b69c; */
-    /* color: #a3d3dfc4 */
-}
-
 .skill-title {
     text-transform: uppercase;
     letter-spacing: 0.1rem;
@@ -299,11 +263,7 @@ body.portfolio-body {
         gap: 30px;
         width: 90%;
     }
-    .skill-container {
-        /* padding: 50px; */
-    }
 }
-
 
 /* BIO PAGE */
 .main-body-bio {
@@ -326,21 +286,35 @@ body.portfolio-body {
     line-height: 28px;
 }
 
-/* .page-title.bio-title {
-    text-align: left;
-} */
+.signature-container {
+    /* display: block; */
+    /* justify-content: flex-start;
+    align-items: flex-start; */
+}
+
+.vv-bio-signature {
+    width: 125px;
+}
 
 
 
 @media only screen and (min-width: 768px) {
     .main-body-bio {
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .bio-title {
+
     }  
     .vv-bio-pic {
         max-width: 350px;
     }
-          
+    .bio-text {
+
+    }
+    .vv-bio-signature {
+
+    }  
 }
 
 @media only screen and (min-width: 1200px) {

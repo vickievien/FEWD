@@ -14,7 +14,7 @@ console.log(`${username}, you are a first time mother on a budget to a newborn b
 const ready = prompt('Ready for the day? Enter [Y]es or [N]o');
 
 const readyGameBegin = () => {
-    if(ready === 'Y' || ready === 'y') {
+    if(ready.toUpperCase() === 'Y') {
         console.log(`Let's begin the day!`);
     }else {
         console.log(`Ready or not, the day must commence!`);
@@ -30,13 +30,13 @@ console.log(`It's 9 a.m. and your sister has started babysitting. You're officia
 const homeCoffeeShop = () => {
     const homeCoffeeShopActivity = prompt('Do you make a cup of coffee at home for free? \nOr better yet, treat yourself out to a nice iced vanilla oatmilk latte at your favorite coffee shop around the corner for $7.00? \nEnter [A] for coffee at home, [B] to treat yourself to a latte at the local coffee shop.')
     
-    if (homeCoffeeShopActivity === 'A' || homeCoffeeShopActivity ==='a') {
+    if (homeCoffeeShopActivity.toUpperCase() === 'A') {
         cost = 0;
         spent = spent + cost;
         budget = budget - cost;
         rationalAct.push('coffee at home');
         console.log(`Economical choice there, ${username}. But hey! Caffeine is caffeine!`);
-    }else if(homeCoffeeShopActivity === 'B' || homeCoffeeShopActivity ==='b') {
+    }else if(homeCoffeeShopActivity.toUpperCase() === 'B') {
         cost =7
         spent = spent + cost;
         budget = budget - cost;
@@ -57,14 +57,14 @@ console.log("Now that you're caffeinated, it's time to really start the day.");
 const diaperMassage = () => {
     const diaperMassageActivity = prompt("Your back has been tense from carrying the baby and could do with a massage. \nOn the other hand, you\'ve put off buying more diapers and only have 10 left. \nHow do you want to spend your day? \nEnter [A] to go buy diapers, [B] to get that massage you're in dire need of.");
 
-    if (diaperMassageActivity === 'A' || diaperMassageActivity ==='a') {
+    if (diaperMassageActivity.toUpperCase() === 'A') {
         cost = 15;
         spent = spent + cost;
         budget = budget - cost;
         rationalAct.push('diapers');
         console.log(`You're a good mother. Let's go buy your baby diapers!`);
         console.log(`${cost.toFixed(2)} well spent! You've got ${budget.toFixed(2)} for the rest of the day.`)
-    }else if(diaperMassageActivity === 'B' || diaperMassageActivity ==='b') {
+    }else if(diaperMassageActivity.toUpperCase() === 'B') {
         cost = 30;
         spent = spent + cost;
         budget = budget - cost;
@@ -84,14 +84,14 @@ console.log("Is that your stomach growling, I hear? Let's get some lunch!");
 const girlParentLunch = () => {
     const girlParentLunchActivity = prompt("\nYour parents called and asked if you could stop by the grocery store for some bananas and come over at lunch to help fix their iPad. \nA homecooked meal would be readily available if you went over. \nOn the other hand, you haven't seen your girlfriends in ages and could do with some girl time over lunch. \nEnter [A] to go to your parents for lunch, [B] to have lunch with your girlfriends.")
 
-    if (girlParentLunchActivity === 'A' || girlParentLunchActivity ==='a') {
+    if (girlParentLunchActivity.toUpperCase() === 'A') {
         cost = 5;
         spent = spent + cost;
         budget = budget - cost;
         rationalAct.push('lunch with parents');
         console.log(`What a good daughter! Your parents will be happy to see you.`);
         console.log(`You killed three birds with one stone: fixed their ipad, bought them bananas and had a homecooked meal!`);
-    }else if(girlParentLunchActivity === 'B' || girlParentLunchActivity ==='b') {
+    }else if(girlParentLunchActivity.toUpperCase() === 'B') {
         cost = 28;
         spent = spent + cost;
         budget = budget - cost;
@@ -112,13 +112,13 @@ console.log(`Wow! How time flies when you're having fun and being productive.`)
 const nailsBabyFood = () => {
     const nailsBabyFoodActivity = prompt(`It's late afternoon now and you noticed you chipped your nail. \nThere's a great nail salon around the corner to get them done but feel like you should stop by home to prep baby food for the next few days. \nEnter [A] to stop by home and prep baby food, [B] to get your chipped nail fixed.`)
 
-    if (nailsBabyFoodActivity === 'A' || nailsBabyFoodActivity ==='a') {
+    if (nailsBabyFoodActivity.toUpperCase() === 'A') {
         cost = 0;
         spent = spent + cost;
         budget = budget - cost;
         rationalAct.push('prepped baby food');
         console.log(`Such a great mother. Let's go home and prep food for your baby!`)
-    }else if(nailsBabyFoodActivity === 'B' || nailsBabyFoodActivity ==='b') {
+    }else if(nailsBabyFoodActivity.toUpperCase() === 'B') {
         cost = 30;
         spent = spent + cost;
         budget = budget - cost;
@@ -135,3 +135,6 @@ const nailsBabyFood = () => {
 };
 
 nailsBabyFood();
+
+console.log(rationalAct);
+console.log(pamperAct);

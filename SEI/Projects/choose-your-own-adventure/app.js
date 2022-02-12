@@ -32,14 +32,14 @@ const homeCoffeeShop = () => {
     
     if (homeCoffeeShopActivity.toUpperCase() === 'A') {
         cost = 0;
-        spent = spent + cost;
-        budget = budget - cost;
+        spent += cost;
+        budget -= cost;
         rationalAct.push('coffee at home');
         console.log(`Economical choice there, ${username}. But hey! Caffeine is caffeine!`);
     }else if(homeCoffeeShopActivity.toUpperCase() === 'B') {
         cost =7
-        spent = spent + cost;
-        budget = budget - cost;
+        spent += cost;
+        budget -= cost;
         pamperAct.push('$7 latte');
         console.log(`We have an iced vanilla oatmilk latte for ${username}!`);
         console.log(`This latte didn't make too much of a dent in your wallet today, thanks to your sister. \nYou still have $${budget.toFixed(2)} to spend for the day.`)
@@ -59,15 +59,15 @@ const diaperMassage = () => {
 
     if (diaperMassageActivity.toUpperCase() === 'A') {
         cost = 15;
-        spent = spent + cost;
-        budget = budget - cost;
+        spent += cost;
+        budget -= cost;
         rationalAct.push('diapers');
         console.log(`You're a good mother. Let's go buy your baby diapers!`);
         console.log(`${cost.toFixed(2)} well spent! You've got ${budget.toFixed(2)} for the rest of the day.`)
     }else if(diaperMassageActivity.toUpperCase() === 'B') {
         cost = 30;
-        spent = spent + cost;
-        budget = budget - cost;
+        spent += cost;
+        budget -= cost;
         pamperAct.push('massage');
         console.log(`Let's go get that massage you well deserve!`);
         console.log(`Wow! Wasn't that lovely. The cheapest full body massage in the area for only ${cost.toFixed(2)}! \nThat leaves you with ${budget.toFixed(2)} to spend.`)
@@ -86,15 +86,15 @@ const girlParentLunch = () => {
 
     if (girlParentLunchActivity.toUpperCase() === 'A') {
         cost = 5;
-        spent = spent + cost;
-        budget = budget - cost;
+        spent += cost;
+        budget -= cost;
         rationalAct.push('lunch with parents');
         console.log(`What a good daughter! Your parents will be happy to see you.`);
         console.log(`You killed three birds with one stone: fixed their ipad, bought them bananas and had a homecooked meal!`);
     }else if(girlParentLunchActivity.toUpperCase() === 'B') {
         cost = 28;
-        spent = spent + cost;
-        budget = budget - cost;
+        spent += cost;
+        budget -= cost;
         pamperAct.push('lunch with girlfriends');
         console.log(`There's nothing like some good old fashioned girl time over food and drinks!`);
         console.log(`Wasn't that ${cost.toFixed(2)} meal delicious and refreshing? \nExactly what you needed to feel alive again! \nGirl time always re-energizes you!`)
@@ -114,15 +114,15 @@ const nailsBabyFood = () => {
 
     if (nailsBabyFoodActivity.toUpperCase() === 'A') {
         cost = 0;
-        spent = spent + cost;
-        budget = budget - cost;
+        spent += cost;
+        budget -= cost;
         rationalAct.push('prepped baby food');
         console.log(`Such a great mother. Let's go home and prep food for your baby!`)
     }else if(nailsBabyFoodActivity.toUpperCase() === 'B') {
         cost = 30;
-        spent = spent + cost;
-        budget = budget - cost;
-        rationalAct.push('nails done');
+        spent += cost;
+        budget -= cost;
+        pamperAct.push('nails done');
         if (budget <40) {
             console.log(`Your nails look nice! You sure have pampered yourself today and spent ${spent.toFixed(2)} so far, leaving you with ${budget.toFixed(2)} left from your sister. \nBut hey! Your nails were worth it. It's on your sister's dime anyway!`)
         }else if(budget < 50) {

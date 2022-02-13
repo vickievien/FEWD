@@ -6,6 +6,7 @@ let cost = 0;
 let spent = 0;
 let pamperAct = [];
 let rationalAct = [];
+let allAct = [];
 
 // WELCOME PROMPT
 const username = prompt('What is your name? ');
@@ -34,13 +35,15 @@ const homeCoffeeShop = () => {
         cost = 0;
         spent += cost;
         budget -= cost;
-        rationalAct.push('coffee at home');
+        rationalAct.push('made coffee at home');
+        allAct.push('made coffee at home');
         console.log(`Economical choice there, ${username}. But hey! Caffeine is caffeine!`);
     }else if(homeCoffeeShopActivity.toUpperCase() === 'B') {
         cost =7
         spent += cost;
         budget -= cost;
-        pamperAct.push('$7 latte');
+        pamperAct.push('bought a $7 latte');
+        allAct.push('bought a $7 latte');
         console.log(`We have an iced vanilla oatmilk latte for ${username}!`);
         console.log(`This latte didn't make too much of a dent in your wallet today, thanks to your sister. \nYou still have $${budget.toFixed(2)} to spend for the day.`)
     }else {
@@ -61,14 +64,16 @@ const diaperMassage = () => {
         cost = 15;
         spent += cost;
         budget -= cost;
-        rationalAct.push('diapers');
+        rationalAct.push('bought diapers for your baby');
+        allAct.push('bought diapers for your baby');
         console.log(`You're a good mother. Let's go buy your baby diapers!`);
         console.log(`${cost.toFixed(2)} well spent! You've got ${budget.toFixed(2)} for the rest of the day.`)
     }else if(diaperMassageActivity.toUpperCase() === 'B') {
         cost = 30;
         spent += cost;
         budget -= cost;
-        pamperAct.push('massage');
+        pamperAct.push('got a massage');
+        allAct.push('got a massage');
         console.log(`Let's go get that massage you well deserve!`);
         console.log(`Wow! Wasn't that lovely. The cheapest full body massage in the area for only ${cost.toFixed(2)}! \nThat leaves you with ${budget.toFixed(2)} to spend.`)
     }else {
@@ -88,14 +93,16 @@ const girlParentLunch = () => {
         cost = 5;
         spent += cost;
         budget -= cost;
-        rationalAct.push('lunch with parents');
+        rationalAct.push('had lunch with your parents');
+        allAct.push('had lunch with your parents');
         console.log(`What a good daughter! Your parents will be happy to see you.`);
         console.log(`You killed three birds with one stone: fixed their ipad, bought them bananas and had a homecooked meal!`);
     }else if(girlParentLunchActivity.toUpperCase() === 'B') {
         cost = 28;
         spent += cost;
         budget -= cost;
-        pamperAct.push('lunch with girlfriends');
+        pamperAct.push('caught up with your girlfriends over lunch');
+        allAct.push('caught up with your girlfriends over lunch');
         console.log(`There's nothing like some good old fashioned girl time over food and drinks!`);
         console.log(`Wasn't that ${cost.toFixed(2)} meal delicious and refreshing? \nExactly what you needed to feel alive again! \nGirl time always re-energizes you!`)
     }else {
@@ -116,13 +123,15 @@ const nailsBabyFood = () => {
         cost = 0;
         spent += cost;
         budget -= cost;
-        rationalAct.push('prepped baby food');
+        rationalAct.push('prepped food for your baby');
+        allAct.push('prepped food for your baby');
         console.log(`Such a great mother. Let's go home and prep food for your baby!`)
     }else if(nailsBabyFoodActivity.toUpperCase() === 'B') {
         cost = 30;
         spent += cost;
         budget -= cost;
-        pamperAct.push('nails done');
+        pamperAct.push('had your nails done');
+        allAct.push('had your nails done');
         if (budget <40) {
             console.log(`Your nails look nice! You sure have pampered yourself today and spent ${spent.toFixed(2)} so far, leaving you with ${budget.toFixed(2)} left from your sister. \nBut hey! Your nails were worth it. It's on your sister's dime anyway!`)
         }else if(budget < 50) {
@@ -136,5 +145,56 @@ const nailsBabyFood = () => {
 
 nailsBabyFood();
 
-console.log(rationalAct);
-console.log(pamperAct);
+
+// PRE 5TH ACTIVITY
+console.log(`What a fulfilling day so far!`);
+allAct.splice(-1,0,'and');
+console.log(`You've done a lot. You've ${allAct.join(', ')}`);
+console.log(`It's almost time to head home to dinner with your family. You have time to do some shopping!`);
+
+const budgetPrompts = () => {
+    if (budget < 30) {
+        console.log(`Oh wait, looks like you only have ${budget.toFixed(2)} left. It's not enough to go shopping. Guess it's time to go home.`);
+        process.exit();
+    }else {
+        console.log(`Now, it's time to think about what to shop for. You could do with some new non-maternity clothes but your baby is also outgrowing theirs.`)
+    }
+};
+
+budgetPrompts();
+
+// 5TH ACTIVITY: SHOPPING
+const momBabyShopping = () => {
+    const momBabyShoppingActivity = prompt(`What's it going to be? \nEnter [A] to buy some new baby clothes, [B] to get yourself some non-maternity clothes.`);
+
+    if (momBabyShoppingActivity.toUpperCase() === 'A') {
+        cost = 30;
+        spent += cost;
+        budget -= cost;
+        rationalAct.push('bought new baby clothes');
+        allAct.push('bought new baby clothes');
+        console.log(`Your baby is going to look so cute in these new clothes`);
+    }else if(momBabyShoppingActivity.toUpperCase() === 'B') {
+        cost = 20;
+        spent += cost;
+        budget -= cost;
+        pamperAct.push('bought yourself a new dress');
+        allAct.push('bought yourself a new dress');
+        console.log(`You are going to rock it in this new dress, hot mama!`);
+    }else {
+        console.log(`Looks like mom brain's got you. Please enter [A] or [B]`);
+    };
+};
+
+momBabyShopping();
+
+
+// EXIT
+console.log(allAct);
+allAct.splice(-3,1);
+console.log(allAct);
+
+
+console.log(`Wow! What an eventful day! You've done all these today: ${allAct.join(', ')}. That's a lot in one day! Looks like it's time to go home and relieve your sister and have dinner with your family.`);
+process.exit();
+

@@ -7,7 +7,6 @@
 
 body {
     background: linear-gradient(55deg, #f8e2f4d7 0%, #e3cdf0c4 51%, #bee6f8d2 85%);
-    /* background: linear-gradient(55deg, #e09dc1 0%, #f5c5cb 51%, #e7b69c 85%); */
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     min-height: 100vh;
@@ -157,7 +156,7 @@ footer {
     align-items: center;
     font-size: 12px;
     padding: 15px 30px;
-    /* position: absolute; */
+    /* position: fixed; */
     bottom: 0;
     width: 100%;
 }
@@ -277,6 +276,10 @@ body.portfolio-body {
     margin-bottom: 25px;
 }
 
+.bio-title-med {
+    display: none;
+}
+
 .vv-bio-pic {
     width: 75%;
 }
@@ -301,13 +304,24 @@ body.portfolio-body {
 @media only screen and (min-width: 768px) {
     .main-body-bio {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 6fr 7fr;
+        gap: 20px;
+        width: 80%;
+        margin: 50px auto;
     }
-    .bio-title {
-
+    .bio-title-small {
+        display: none;
     }  
+    .bio-title-med {
+        display: block;
+        text-align: left;
+    }
     .vv-bio-pic {
-        max-width: 350px;
+        /* max-width: 350px; */
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
     }
     .bio-text {
 
@@ -318,4 +332,11 @@ body.portfolio-body {
 }
 
 @media only screen and (min-width: 1200px) {
+    .main-body-bio {
+        width: 60%;
+        grid-template-columns: 2fr 3fr;
+    }
+    .bio-title-med br {
+        display: none;
+    }
 }

@@ -52,12 +52,16 @@ console.log('hello');
 
 // RANDOM CARD SECTION
 const magicMe = async() => {
+
+
+    document.querySelector('.random-section').classList.toggle('display');    
+
     let randomUrl = `https://thecocktaildb.com/api/json/v1/1/random.php`;
     const randomResponse = await fetch(randomUrl);
     const randomData = await randomResponse.json();
     console.log(randomData);
 
-    const randomFrontCard = document.querySelector('.random-front');
+    const randomFrontCard = document.querySelector('.random-front-wrapper');
     const randomAlcoholType = document.querySelector('.random-alc-type');
     const randomCocktailName = document.querySelector('.random-cocktail-name');
     const randomGlassType = document.querySelector('.random-glass-type-name');
@@ -84,13 +88,16 @@ const magicMe = async() => {
 
     console.log(randomData.drinks[0].strGlass.toLowerCase());
 
-    
-    
-
-    
 }
 document.querySelector('#magic').addEventListener('click', magicMe);
 
+
+// 2. FLIPPING SKILL CARDS
+function flipRandom() {
+    console.log(this);
+    this.classList.toggle('flip');
+}
+document.querySelector('.random-cards-container').addEventListener('click', flipRandom);
 
 
 

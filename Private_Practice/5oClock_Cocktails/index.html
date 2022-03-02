@@ -26,9 +26,9 @@
                 <ul class="nav-list">
                     <div class="popover-container">
                         <li class="nav-list-item magic" id="magic"><i class="fas fa-magic"></i></li>
-                        <div class="popover-content">
+                        <!-- <div class="popover-content">
                             <p class="popover-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque porro corporis</p>
-                        </div>
+                        </div> -->
                     </div>
                     <li class="nav-list-item search"><i class="fas fa-search"></i></li>
                 </ul>
@@ -38,24 +38,44 @@
         <main class="welcome">
             <div class="welcome-text-container">
                 <h2 class="welcome-title">It's 5 'o Clock somewhere!</h2>
-                <h3 class="welcome-caption">Search for a favorite cocktail, new mixed drink or something random</h3>
+                <h3 class="welcome-caption">Search for a favorite cocktail, new mixed drink or something random with the magic wand.</h3>
             </div>
         </main>
 
         <section class="random-section">
-            <div class="card-faces-container"></div>
-            <article class="cocktail-card random-front">
-                <div class="random-text-container">
-                    <p class="random-alc-type">A</p>
-                    <div class="cocktail-name-container">
-                        <h2 class="random-cocktail-name">Cocktail Name</h2>
-                        <div class="random-glass-type">
-                            <i class="random-glass-icon"></i>
-                            <p class="random-glass-type-name">Glass</p>
+            <h2 class="random-title">Random Cocktail</h2>
+            <div class="random-card-scene">
+                <div class="random-cards-container">
+                    <article class="cocktail-card random-front">
+                        <div class="random-front-wrapper">
+                            <div class="random-text-container">
+                                <p class="random-alc-type"></p>
+                                <div class="cocktail-name-container">
+                                    <h2 class="random-cocktail-name"></h2>
+                                    <div class="random-glass-type">
+                                        <i class="random-glass-icon"></i>
+                                        <p class="random-glass-type-name">Glass</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </article>
+                    <article class="cocktail-card random-back">
+                        <div class="random-back-text-container">
+                            <p class="random-alc-type"></p>
+                            <h2 class="random-cocktail-name"></h2>
+                            <div>
+                                <img src="" alt="">
+                                <ul>
+                                    <li></li>
+                                </ul>
+                            </div>
+                            <p class="random-instruction"></p>
+                        </div>
+                    </article>
                 </div>
-            </article>
+            </div>
+            <a class="random-button">Randomize</a>
         </section>
 
 

@@ -1,66 +1,12 @@
-console.log('hello');
-// let searchCocktailName = ;
-// let filterGlassType = ;
-// let filterIngredient = ;
-// let searchRandom = ;
-// const inputValue = document.querySelector('#input').value;
-// const inputValue = 'random.php'
-
-// async function cocktailRun() {
-    
-//     let randomUrl = `https://thecocktaildb.com/api/json/v1/1/random.php`
-    
-    
-//     const randomResponse = await fetch(randomUrl);
-//     const randomData = await randomResponse.json();
-//     console.log(randomData);
-//     console.log(randomData.drinks[0].strDrinkThumb);
-
-
-//     let downUrl = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=16991`
-    
-    
-//     // const downResponse = await fetch(downUrl);
-//     // const downData = await downResponse.json();
-//     // console.log(downData);
-//     // console.log(downData.drinks[0].strDrinkThumb);
-
-//     // document.querySelector('.welcome').style.backgroundImage = `url('${downData.drinks[0].strDrinkThumb}')`
-//     // document.querySelector('.welcome').style.backgroundSize = "cover";
-
-
-    
-
-//     // let url = `https://thecocktaildb.com/api/json/v1/1/${inputValue}`
-
-//     // let url = `https://thecocktaildb.com/api/json/v1/1/lookup.php?i=11007`
-    
-//     // array.forEach(element => {
-        
-//     // });
-//     // const div = document.createElement('div');
-//     // div.classList.add('div');
-//     // document.querySelector('body').appendChild(div);
-
-//     // const img
-// }
-
-// cocktailRun();
-
-// GLASSTYPE FUNCTION
-
-
 // RANDOM CARD SECTION
 const magicMe = async() => {
-
-
-    document.querySelector('.random-section').classList.toggle('display');    
 
     let randomUrl = `https://thecocktaildb.com/api/json/v1/1/random.php`;
     const randomResponse = await fetch(randomUrl);
     const randomData = await randomResponse.json();
     console.log(randomData);
 
+    // RANDOM FRONT CARD
     const randomFrontCard = document.querySelector('.random-front-wrapper');
     const randomAlcoholType = document.querySelector('.random-alc-type');
     const randomCocktailName = document.querySelector('.random-cocktail-name');
@@ -87,9 +33,15 @@ const magicMe = async() => {
     };
 
     console.log(randomData.drinks[0].strGlass.toLowerCase());
-
 }
-document.querySelector('#magic').addEventListener('click', magicMe);
+magicMe();
+
+const displayRandom = () => {
+    document.querySelector('.random-section').classList.toggle('display');    
+}
+document.querySelector('#magic').addEventListener('click', displayRandom);
+
+document.querySelector('.random-button').addEventListener('click', magicMe);
 
 
 // 2. FLIPPING SKILL CARDS

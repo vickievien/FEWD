@@ -166,6 +166,7 @@ body {
 }
 
 /* COCKTAIL CARD */
+/* FRONT CARD */
 .random-section {
     width: 100%;
     height: auto;
@@ -178,46 +179,15 @@ body {
 }
 
 .random-title {
-    margin: 0 auto 40px auto;
+    margin: 0 auto 30px auto;
     text-align: center;
     font-size: 32px;
     letter-spacing: 0.1rem;
-    color: var(--pinkyPink);
+    color: rgb(149, 204, 87);
 }
 
 .random-section.display {
     display: block;
-}
-
-.random-card-scene {
-    width: 80%;
-    height: 400px;
-    margin: 0 auto;
-    padding: 0;
-    perspective: 1000px;
-    cursor: pointer;
-}
-
-.random-cards-container {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    cursor: pointer;
-    transition: transform 1s;
-    transform-style: preserve-3d;
-}
-
-.cocktail-card {
-    border-radius: 20px;
-    border: 0.5px solid rgb(223, 223, 223);
-    width: 100%;
-    height:100%;
-    margin: 0 auto;
-    display: flex;
-    box-shadow: 3px 3px 10px rgb(230, 230, 230);
-    overflow: hidden;
 }
 
 .random-front-wrapper {
@@ -225,6 +195,7 @@ body {
     position: relative;
     overflow: hidden;
     width: 100%;
+    z-index: 0;
 }
 
 .random-front-wrapper:before {
@@ -237,30 +208,15 @@ body {
     content: "";  
 }
 
-.random-front,
-.random-back {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-}
-
-.random-back {
-    transform: rotateY(180deg);
-    background-color: var(--greenGains);
-}
-
-.random-cards-container.flip {
-    transform: rotateY(180deg);
-}
-
 .random-text-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 20px;
     height: 100%;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
 }
 
 .random-alc-type {
@@ -293,7 +249,7 @@ body {
 .random-button {
     padding: 10px 20px;
     border-radius: 30px;
-    background-color: var(--pinkyPink);
+    background-color: rgb(149, 204, 87);
     font-size: 24px;
     font-weight: 500;
     color: white;
@@ -302,6 +258,77 @@ body {
     width: fit-content;
 }
 
+/* CARD FLIPPING */
+.random-card-scene {
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+    padding: 0;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.random-cards-container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    cursor: pointer;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.cocktail-card {
+    border-radius: 20px;
+    border: 0.5px solid rgb(223, 223, 223);
+    width: 100%;
+    height:100%;
+    margin: 0 auto;
+    display: flex;
+    box-shadow: 3px 3px 10px rgb(230, 230, 230);
+    overflow: hidden;
+}
+
+.random-front,
+.random-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.random-back {
+    transform: rotateY(180deg);
+}
+
+.random-cards-container.flip {
+    transform: rotateY(180deg);
+}
+
+/* BACK CARD */
+.pic-ingredient-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.random-back-pic {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ingredient-title {
+    margin-bottom: 5px;
+}
+
+.ingredient-list-item {
+    list-style: none;
+    padding: 5px 0;
+}
 
 
 

@@ -30,7 +30,7 @@
                             <p class="popover-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque porro corporis</p>
                         </div> -->
                     </div>
-                    <li class="nav-list-item search"><i class="fas fa-search"></i></li>
+                    <li class="nav-list-item search" id="search"><i class="fas fa-search"></i></li>
                 </ul>
             </nav>
         </header>
@@ -43,6 +43,7 @@
         </main>
 
         <section class="random-section">
+            <p class="random-close"><i class="fas fa-times"></i></p>
             <h2 class="random-title">Random Cocktail</h2>
             <div class="random-card-scene">
                 <div class="random-cards-container">
@@ -54,7 +55,7 @@
                                     <h2 class="random-cocktail-name"></h2>
                                     <div class="random-glass-type">
                                         <i class="random-glass-icon"></i>
-                                        <p class="random-glass-type-name">Glass</p>
+                                        <p class="random-glass-type-name"></p>
                                     </div>
                                 </div>
                             </div>
@@ -62,16 +63,22 @@
                     </article>
                     <article class="cocktail-card random-back">
                         <div class="random-text-container">
-                            <p class="random-alc-type">alcoholic</p>
-                            <h2 class="random-cocktail-name">Bloody Mary</h2>
+                            <p class="random-alc-type"></p>
+                            <div class="random-name-glass-container">
+                                <h2 class="random-cocktail-name">Bloody Mary</h2>
+                                <div class="random-glass-type">
+                                    <i class="random-glass-icon"></i>
+                                    <p class="random-glass-type-name"></p>
+                                </div>
+                            </div>
                             <div class="pic-ingredient-container">
                                 <img class="random-back-pic" src="https://www.thecocktaildb.com/images/media/drink/qcgz0t1643821443.jpg" alt="">
                                 <section class="ingredients-container">
                                     <h3 class="ingredient-title">Ingredients:</h3>
                                     <ul class="ingredient-list">
-                                        <li class="ingredient-list-item">1 part tomato juice test</li>
-                                        <li class="ingredient-list-item">1 part tomato juice</li>
-                                        <li class="ingredient-list-item">1 part tomato juice</li>
+                                        <li class="ingredient-list-item"></li>
+                                        <li class="ingredient-list-item"></li>
+                                        <li class="ingredient-list-item"></li>
                                     </ul>
                                 </section>
                             </div>
@@ -82,6 +89,11 @@
             </div>
             <a class="random-button">Randomize</a>
         </section>
+
+        <section class="search-section">
+
+        </section>
+
 
 
         <script src="script.js" async defer></script>

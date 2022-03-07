@@ -1,4 +1,14 @@
 /* GLOBAL UPDATES */
+:root {
+    --baby-pink: rgba(248, 226, 244, 0.843);
+    --baby-periwinkle: rgba(227, 205, 240, 0.769);
+    --baby-blue: rgba(190, 230, 248, 0.824);
+    --lightest-gray: rgba(245, 245, 245,1);
+    --light-gray: rgba(190, 190, 190,1);
+    --medium-gray: rgba(133, 133, 133,1);
+    --dark-gray: rgba(65, 65, 65,1);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,7 +16,7 @@
 }
 
 body {
-    background: linear-gradient(55deg, #f8e2f4d7 0%, #e3cdf0c4 51%, #bee6f8d2 85%);
+    background: linear-gradient(55deg, var(--baby-pink) 0%, var(--baby-periwinkle) 38%, var(--baby-blue) 85%);
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     min-height: 100vh;
@@ -172,46 +182,135 @@ body.portfolio-body {
     gap: 20px;
 }
 
-.port-container {
-    margin: 0 auto;
+.proj-pic-a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: transform 650ms;
 }
 
-.port-container:hover {
+.proj-pic-a:hover {
     transform: translateY(-10px);
     transition: transform 650ms;
 }
 
-.port-contain-a {
-    width: 100%;
-}
-
-.port-pic {
+.proj-pic {
     width: 100%;
     display: block;
     border-radius: 10px;
 }
 
-.port-title {
+.proj-text-container {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.proj-featured {
+    font-size: 12px;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+}
+
+.proj-title {
     margin: 10px auto;
     text-align: center;
-    font-size: 16px;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-weight: 300;
+    line-height: 36px;
+}
+
+.proj-caption {
+    line-height: 28px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.proj-button {
+    display: block;
+    background-image: linear-gradient(55deg, var(--baby-pink) 0%, var(--baby-periwinkle) 38%, var(--baby-blue) 85%);
+    padding: 10px 45px;
+    box-shadow: 2px 2px 5px rgb(230, 230, 230);
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 5px;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
-    font-weight: 300;
+    position: relative;
+    z-index: 1;
+    font-weight: 400;
+    color: var(--dark-gray);
 }
+
+.proj-button:visited {
+    color: var(--dark-gray);
+}
+
+.proj-button::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(55deg, var(--baby-blue) 0%, var(--baby-periwinkle) 38%, var(--baby-pink) 85%);
+    z-index: -1;
+    transition: opacity 0.4s linear;
+    opacity: 0;
+    border-radius: 5px;
+}
+
+.proj-button:hover::before {
+    opacity: 1;
+}
+
 
 @media only screen and (min-width: 768px) {
     .port-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 50px;
+        grid-template-columns: 10fr 9fr;
+        gap: 25px;
     }
-    .port-title {
-        font-size: 24px;
+    .proj-text-container {
+        margin: 0;
+        /* display: flex; */
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .proj-featured,
+    .proj-title,
+    .proj-caption {
+        text-align: left;
+    }
+    .proj-button {
+        margin-left: 0;
     }
 }
 
 @media only screen and (min-width: 1200px) {
+    .port-grid {
+        grid-template-columns: 5fr 4fr;
+        gap: 35px;
+        width: 75%;
+    }
+    .proj-featured {
+        font-size: 16px;
+    }
+    .proj-title {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .proj-caption {
+        font-size: 20px;
+        line-height: 32px;
+    }
 }
 
 
@@ -224,11 +323,9 @@ body.portfolio-body {
 
 .skill-container {
     text-align: center;
-    /* border: 0.005px solid rgb(73, 73, 73); */
     padding: 30px;
-    background-color: rgb(245, 245, 245);
-    box-shadow: 5px 5px 15px rgb(190, 190, 190);
-    /* will-change: transform; */
+    background-color: var(--lightest-gray);
+    box-shadow: 5px 5px 15px var(--light-gray);
     transition: transform 650ms;
 }
 

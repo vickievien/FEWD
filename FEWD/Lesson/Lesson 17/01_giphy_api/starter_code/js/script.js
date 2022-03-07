@@ -8,7 +8,7 @@
 
 
 
-const apiKey = "";
+const apiKey = "0o9UeHyCYFHX9euoFQjUIIHjxSBlkVEh";
 
 async function giphySearch(e) {
   

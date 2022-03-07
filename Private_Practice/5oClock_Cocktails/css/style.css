@@ -49,6 +49,7 @@ body {
     justify-content: flex-end;
     align-items: center;
     gap: 10px;
+    cursor: pointer;
 }
 
 .nav-list-item {
@@ -178,6 +179,12 @@ body {
     display: none;
 }
 
+.random-close {
+    position: absolute;
+    top: 0;
+    right: 40px;
+}
+
 .random-title {
     margin: 0 auto 30px auto;
     text-align: center;
@@ -256,6 +263,7 @@ body {
     margin: 30px auto 0 auto;
     display: block;
     width: fit-content;
+    cursor: pointer;
 }
 
 /* CARD FLIPPING */
@@ -317,7 +325,7 @@ body {
 
 .random-back-pic {
     width: 40%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
 }
 
@@ -332,3 +340,33 @@ body {
 
 
 
+
+@media only screen and (min-width: 768px) {
+    .random-cards-container {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .random-cards-container {
+        width: 30%;
+    }
+}
+
+
+/* SEARCH SECTION */
+.search-section {
+    width: 100%;
+    height: auto;
+    padding: 100px 0;
+    position: absolute;
+    top: 65px;
+    z-index: 1;
+    background-color: white;
+    display: none;
+}
+
+.search-section.display {
+    display: block;
+}

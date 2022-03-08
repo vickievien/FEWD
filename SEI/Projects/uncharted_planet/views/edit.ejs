@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <h1>EDIT SCIENTIST FORM</h1>
+
+    <form action="/scientists/<%=index%>?_method=PUT" method="POST">
+
+        <label for="name">Scientist Name:</label>
+        <input type="text" name="name" value="<%= scientist.name %>">
+        <label for="description">Description</label>
+        <input type="text" name="description" value="<%= scientist.description %>">
+
+        <input type="submit" value="submit"></input>
+
+        <a href="/scientists">Go Back</a>
+    </form>
+
+
+</body>
+
+</html>

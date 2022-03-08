@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <h1>
+        <%=scientist.name%>
+    </h1>
+    <p>
+        <%=scientist.description%>
+    </p>
+
+    <a href="/scientists/<%=index%>/edit ">edit</a>
+    <form action="/scientists/<%=index%>?_method=DELETE" method="POST">
+        <button type="submit">Delete</button>
+    </form>
+
+    <a href="/scientists">Back to index</a>
+</body>
+
+</html>

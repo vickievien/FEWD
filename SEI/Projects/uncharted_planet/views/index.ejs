@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <h1>ALL SCIENTISTS</h1>
+
+    <ul>
+        
+    <% for(let i = 0; i < scientists.length; i++) { %> 
+        <li>
+            <a href="/scientists/<%=i%>"><%= scientists[i].name %></a>
+            <span>|</span>
+            <a href="/scientists/<%=i%>/edit"> Edit </a>
+        </li>
+    <% } %>
+
+    </ul>
+    
+    <a href="/scientists/new">Create Scientists</a>
+
+    <form action="/scientists?_method=DELETE" method="POST">
+        <button type="submit">KILL OFF YOUR SCIENTISTS</button>
+    </form>
+</body>
+
+</html>

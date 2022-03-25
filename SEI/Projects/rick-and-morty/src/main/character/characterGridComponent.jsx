@@ -6,7 +6,7 @@ import CharacterCardComponent from './characterCardComponent';
 function CharacterGridComponent(props) {
   return (
     <section className='grid character-grid'>
-        <CharacterCardComponent getMeCharacter={props.getMeCharacter} characters={props.characters}/>
+        <CharacterCardComponent getMeCharacter={props.getMeCharacter}  detailsOpen={props.detailsOpen}  characters={props.characters}/>
     </section>
 
     );

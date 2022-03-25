@@ -75,16 +75,20 @@ const magicMe = async() => {
 
     for(let i=0; i<ingredientItems.length; i++) {
         let strMeasure = `strMeasure${i+1}`;
-        console.log(strMeasure);
+        console.log(`I am ${strMeasure}`);
+        
         let strIngredient = `strIngredient${i+1}`;
-        console.log(strIngredient);
+        console.log(`I am ${strIngredient}`);
 
-        let strMeasureData = `randomData.drinks[0].${strMeasure}`;
-        console.log(strMeasureData);
-        let strIngredientData = `randomData.drinks[0].${strIngredient}`;
-        console.log(strIngredientData);
+        let strMeasureData = randomData.drinks[0].strMeasure;
+        console.log(`I am the full string ${strMeasureData}`);
+        
+        let strIngredientData = randomData.drinks[0].strIngredient;
+        console.log(`I am the full string ${strIngredientData}`);
 
-        ingredientItems[i].innerText = strMeasureData - strIngredientData;
+        ingredientItems[i].innerText = `${strMeasureData} - ${strIngredientData}`;
+
+        
     }
 
 
